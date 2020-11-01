@@ -1,0 +1,48 @@
+Definir a linguagem de programação (imperativa) que vamos usar.
+
+    1. Atribuição x = E, por exemplo (x = 3, x = 2*y, x = x+1)
+        significado de x = 4 + x
+        a) calcular o valor de 4 + x
+        b) colocar o resultado desse cálculo em x
+
+    2. Sequência A; B por exemplo x = 2*y; x = x+1
+        significado de A;B
+        a) executa-se A
+        b) a partir do estado resultante, executa-se B
+
+    3. Condicional if c A else B
+        significado de if c A else B
+        a) Calcular o valor de c (usando o estado inicial)
+        b) se c for verdadeiro executar A a partir do estado inicial
+        c) se c for falso executar B a partir do estado inicial
+
+    4. Ciclo while c A
+        significado de while c A
+        a) calcular o valor de c no estado inicial
+        b) se c for falso, termina e não muda o estado
+        c) se c for verdadeiro executo A e volto ao inicio com o estado modificado
+
+
+1. Regra da Atribuição
+    P => Q [x\E]
+    ---------------
+    {P} x = E {Q}  (conclusao)
+
+    a [x\E] significa que a expressão a, substituindo todas as ocurrencias de x por E.
+    Por exemplo (x + y) [x\(3+z)] = ((3+z)+y)
+
+    {???} x = 4+y {x > 10}
+    Usando a regra da atribuição
+    ??? => (x > 10) [x\(4+y)]
+           ((4+y) > 10)
+           y>6
+
+2. Regra da Sequência
+    {P} A {R}    {R} B {Q}
+    ----------------------
+    {P} A ; B {Q}         (conclusao)
+
+2. Regra da Condicional
+    {P && c} A {Q}    {P && not c} B {Q}
+    ------------------------------------
+    {P} if c A else B {Q}               (conclusao)

@@ -1,0 +1,111 @@
+Definir a linguagem de programação (imperativa) que vamos usar.
+
+    1. Atribuição x = E, por exemplo (x = 3, x = 2*y, x = x+1)
+        significado de x = 4 + x
+        a) calcular o valor de 4 + x
+        b) colocar o resultado desse cálculo em x
+
+    2. Sequência A; B por exemplo x = 2*y; x = x+1
+        significado de A;B
+        a) executa-se A
+        b) a partir do estado resultante, executa-se B
+
+    3. Condicional if c A else B
+        significado de if c A else B
+        a) Calcular o valor de c (usando o estado inicial)
+        b) se c for verdadeiro executar A a partir do estado inicial
+        c) se c for falso executar B a partir do estado inicial
+
+    4. Ciclo while c A
+        significado de while c A
+        a) calcular o valor de c no estado inicial
+        b) se c for falso, termina e não muda o estado
+        c) se c for verdadeiro executo A e volto ao inicio com o estado modificado
+
+
+1. Regra da Atribuição
+    P => Q [x\E]
+    ---------------
+    {P} x = E {Q}  (conclusao)
+
+    a [x\E] significa que a expressão a, substituindo todas as ocurrencias de x por E.
+    Por exemplo (x + y) [x\(3+z)] = ((3+z)+y)
+
+    {???} x = 4+y {x > 10}
+    Usando a regra da atribuição
+    ??? => (x > 10) [x\(4+y)]
+           ((4+y) > 10)
+           y>6
+
+2. Regra da Sequência
+    {P} A {R}    {R} B {Q}
+    ----------------------
+    {P} A ; B {Q}         
+
+3. Regra da Condicional
+    {P && c} A {Q}    {P && not c} B {Q}
+    ------------------------------------
+    {P} if c A else B {Q}               
+
+3'. Regra da condicional
+
+    {P && c} A {Q} {P && not c} => Q
+    --------------------------------
+    {P} if c A {Q}
+    Exemplo: {x == x0 && y==y0} if (x<y)
+
+4. Ciclos
+
+    Invariante é um predicade que
+    a) é valido em todos os estado em que o ciclo se inicia
+        1. Estalecimento do Invariante
+            I é valido no inicio (antes da 1ª iteraçao)
+            P => I
+        2. Preservação
+            Se I é valido e estamos em condiçoes de executar uma iteração apos executar uma iteraçao I continua valido
+            I && x => I
+    b) Utilidade
+    Quando o ciclo termina, garante a pós-condiçao
+
+    P => I    {I && c} A {I}    (I && not c) => Q
+    ---------------------------------------------
+    {P} while c A {Q}
+
+    Exemplo:
+        {
+            x == x0,
+            i == i0,
+            r == r0
+        },
+        {
+            while ( i <= x ) {
+                i=i+1;
+                r = r*i;
+            }
+        },
+        {
+            r==x0!
+        }
+
+    Descubrir a Invariante
+        Exemplo de execução
+            (x0 == 5)
+
+              x  |  i  |  r
+            -----+-----+------
+        init  5  |  0  |  1
+              5  |  1  |  1 
+              5  |  2  |  2
+              5  |  3  |  6
+              5  |  4  |  24
+              5  |  5  |  120
+
+            r == x0!
+
+        I = 
+        {
+            r == i! && i<=x && x == x0
+            i<=x && x<=i && x == x0
+            => i == x0
+        }
+        

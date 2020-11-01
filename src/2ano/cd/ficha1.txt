@@ -1,0 +1,61 @@
+1.
+    i)
+    tentativa de quantificar a informaçao de uma mensagem, baseando-se na probabilidade de essa mensagem se tornar realidade
+
+    ii)
+    informaçao media (por simbolo/mensage) gerada pela fonte
+
+    iii)
+    quantidade de informaçao util gerada por segundo pela fonte
+
+2.
+Baralho -> 4x naipes
+Naipe -> 13 cartas [2,3,...,10,V,D,R,A]
+Total -> 52 cartas
+    
+    a)
+    P_carta = 1/52
+    P_espada = (1/52)*13 = 1/4
+    I_espada = log_2(1/P_espada) = log_2(1/4)^(-1) = log_2(4) = 2 bits
+
+    b)
+    P_a = (4/52)
+    I_a = log_2(1/P_a) = log_2(52/4) = log_2(13) = 3.7 bits
+
+    c)
+    P_a_espada = 1/52
+    I_a_espada = log_2(1/P_a_espada) = I_espada + I_a = 2 + 3.7 = 5.7 bits
+    I_a_espada = log_2(52) = 5.7 bits
+
+3.
+P_p = 2/3
+P_t = 1 - P_p = 1/3
+S_s = 3.75 simb/seg 
+entropia = m(som)(i=1) P_i*P_i =
+         = P_p*I_p + P_t*I_t =
+         = P_p*log_2(P_p^(-1)) + P_t*log_2(P_t^(-1)) =
+         = 2/3*log_2(3/2) + 1/3*log_2(3) =
+         = 0.92 bits/simb
+
+R = r_s*entropia = 3.75*0.92 = 3.45 bits/s
+
+4.
+X_i = {X_i,...,X_n}
+P_i = {P_i,...,P_n}
+Se P_i = P = 1/n entao entropia = ?
+entropia = n(som)(i=1) P_n*P_n =
+         = n(som)(i=1) P_n*log_2(P_n^(-1)) =
+         = n(som)(i=1) (1/n)*log_2(n) + ... + (1/n)*log_2(n) =
+         = (1/n)*n*log_2(n) = log_2(n)
+
+5.
+    a)
+    X_i = {A,B,C,D,E,F,G,H} (m=8)
+    P_i = {1/2,1/12,1/12,1/12,1/16,1/16,1/16,1/16}
+    entropia = ?
+    entropia = m(som)(i=1) P_i*I_i =
+         = P_a*I_a + P_b*I_b + ... + P_h*I_h
+         = P_a*I_a + 3*P_b*I_b + 4*P_h*I_h
+         = (1/2)*log_2(2) + 3*(1/12)*log_2(12) + 4*(1/16)*log_2(16)
+         = 0.5+1/4*log_2(12)+1/4*log_2(16) =
+         = 0.5+0.9+1 = 2.4 bits/simb
