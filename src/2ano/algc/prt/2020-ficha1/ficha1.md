@@ -5,7 +5,7 @@
 ###### Enunciado
 
 ```
-P: x == x0 >= 0 && y == y0 > 0
+P: x == x_0 >= 0 && y == y_0 > 0
 
     r = x;
     q = 0;
@@ -14,7 +14,7 @@ P: x == x0 >= 0 && y == y0 > 0
         q = q+1;
     }
 
-Q: 0 <= r < y0 && q*y0+r == x0
+Q: 0 <= r < y_0 && q*y_0+r == x_0
 ```
 
 ###### Resposta
@@ -25,7 +25,7 @@ Inicializacao:
 Preservacao: 
     {I && y<=r} r = r-y; q = q+1 {I}
 Utilidade: 
-    {I && y>r} => {0<=r<y0 && q*y0+r == x0}
+    {I && y>r} => {0<=r<y_0 && q*y_0+r == x_0}
 ```
 
 ### 2.
@@ -33,7 +33,7 @@ Utilidade:
 ###### Enunciado
 
 ```
-P: n == n0 > 0
+P: n == n_0 > 0
 
     i = 1; r = 1; s = 0;
     while(i<n){
@@ -42,7 +42,7 @@ P: n == n0 > 0
         i = i+1;
     }
 
-Q: r == F(n0)
+Q: r == F(n_0)
 ```
 
 ###### Resposta
@@ -53,7 +53,7 @@ Inicializacao:
 Preservacao: 
     {I && i<n} r = r+s; s = r-s; i = i+1; {I}
 Utilidade: 
-    {I && i>=n} => {r == F(n0)}
+    {I && i>=n} => {r == F(n_0)}
 ```
 
 ### 3.
@@ -64,26 +64,72 @@ Utilidade:
 mdc(x,x) = x
 mdc(x,y) = mdc(x+y,y) = mdc(x,x+y)
 
-P: a == a0 > 0 && b == b0 > 0
+P: a == a_0 > 0 && b == b_0 > 0
 
     while(a!=b)
         if(a>b) a = a-b;
         else    b = b-a;
 
-Q: a == mdc(a0,b0)
+Q: a == mdc(a_0,b_0)
 
-I: mdc(a,b) == mdc(a0,b0)
+I: mdc(a,b) == mdc(a_0,b_0)
 ```
 
-<!-->TODO Add correcao total</!-->
 ###### Reposta
-
+<!-- TODO Add correcao total -->
 ```
 Inicializacao: 
-    {a>0 && b>0} => {mdc(a,b) == mdc(a0,b0)}
+    {a>0 && b>0} => {mdc(a,b) == mdc(a_0,b_0)}
 Preservacao: 
-    {mdc(a,b) == mdc(a0,b0) && a!=b}
+    {mdc(a,b) == mdc(a_0,b_0) && a!=b}
 Utilidade:
-    1. {mdc(a,b) == mdc(a0,b0) && a==b && a>b} => {mdc(a-b,b) == mdc(a0,b0)}
-    2. {mdc(a,b) == mdc(a0,b0) && a==b && a<=b} => {mdc(a,b-a) == mdc(a0,b0)}
+    1. {mdc(a,b) == mdc(a_0,b_0) && a==b && a>b} => {mdc(a-b,b) == mdc(a_0,b_0)}
+    2. {mdc(a,b) == mdc(a_0,b_0) && a==b && a<=b} => {mdc(a,b-a) == mdc(a_0,b_0)}
 ```
+
+# Determinacao de invariantes de ciclo
+
+### 1
+
+´´´
+P: N >= 0 && (0 <=i < N, A[i] == a_i)
+Q: s == (sum (i=0) (N-1) (a_i))
+´´´
+
+### 1.(a)
+
+###### Enunciado
+
+```
+s = 0; p = 0;
+while(p<N){
+    s = s+A[p]; p = p+1;
+}
+```
+
+###### Resposta
+
+´´´
+Inicializacao: 
+    {N >= 0 && (0 <=i < N, A[i] == a_i)} s = 0; p = 0 {I}
+Preservacao: 
+    {I && p<N} s = s+A[p]; p = p+1; {I}
+Utilidade: 
+    {I && p>=N} => {s == (sum (i=0) (N-1) (a_i))}
+´´´
+
+´´´
+A[p] = {1,2,3,4}
+´´´
+
+| s | p | N |
+|:-:|:-:|:-:|
+| 0 | 0 | 4 |
+| 1 | 1 | 4 |
+| 3 | 2 | 4 |
+| 6 | 3 | 4 |
+|10 | 4 | 4 |   
+
+´´´
+I: s = sum (i=0) (p-1) (a_i) && 0 <= p <= N
+´´´
