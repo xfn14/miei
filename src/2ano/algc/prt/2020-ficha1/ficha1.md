@@ -1,4 +1,4 @@
-# Invariantes de ciclo
+# 2. Invariantes de ciclo
 
 ### 1.
 
@@ -87,12 +87,12 @@ Utilidade:
     2. {mdc(a,b) == mdc(a_0,b_0) && a==b && a<=b} => {mdc(a,b-a) == mdc(a_0,b_0)}
 ```
 
-# Determinacao de invariantes de ciclo
+# 3. Determinacao de invariantes de ciclo
 
 ### 1
 
 ```
-P: N >= 0 && (0 <=i < N, A[i] == a_i)
+P: N >= 0 && (forall 0 <=i < N, A[i] == a_i)
 Q: s == (sum (i=0) (N-1) (a_i))
 ```
 
@@ -103,7 +103,8 @@ Q: s == (sum (i=0) (N-1) (a_i))
 ```
 s = 0; p = 0;
 while(p<N){
-    s = s+A[p]; p = p+1;
+    s = s+A[p];
+    p = p+1;
 }
 ```
 
@@ -111,11 +112,50 @@ while(p<N){
 
 ```
 Inicializacao: 
-    {N >= 0 && (0 <=i < N, A[i] == a_i)} s = 0; p = 0 {I}
+    {N >= 0 && (forall 0 <=i < N, A[i] == a_i)} s = 0; p = 0 {I}
 Preservacao: 
-    {I && p<N} s = s+A[p]; p = p+1; {I}
+    {I && p<N} s = s+A[p]; p = p+1 {I}
 Utilidade: 
     {I && p>=N} => {s == (sum (i=0) (N-1) (a_i))}
+```
+
+```
+A[p] = {1,2,3,4}
+```
+
+| s | p | N |
+|:-:|:-:|:-:|
+| 0 | 0 | 4 |
+| 1 | 1 | 4 |
+| 3 | 2 | 4 |
+| 6 | 3 | 4 |
+|10 | 4 | 4 |   
+
+```
+I: s = sum (i=0) (p-1) (a_i) && p <= N
+```
+
+### 1.(b)
+
+###### Enunciado
+
+```
+s = 0; p = N;
+while(p>0){
+    p = p-1;
+    s = s+A[p];
+}
+```
+
+###### Resposta
+
+```
+Inicializacao: 
+    {N >= 0 && (forall 0 <=i < N, A[i] == a_i)} s = 0; p = N {I}
+Preservacao: 
+    {I && p>0} p = p-1; s = s+A[p]; {I}
+Utilidade: 
+    {I && p<=0} => {s == (sum (i=0) (N-1) (a_i))}
 ```
 
 ```
