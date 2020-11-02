@@ -34,15 +34,15 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 
 ### 2 ano
 
-- **ALGC**[(root)](https://github.com/andreubita/miei/tree/master/src/2ano/algc) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/prt)
-- **ARQC**[(root)](https://github.com/andreubita/miei/tree/master/src/2ano/arqc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/arqc/prt)
-- **CD**[(root)](https://github.com/andreubita/miei/tree/master/src/2ano/cd)
-- **EA**[(root)](https://github.com/andreubita/miei/tree/master/src/2ano/ea)
+- **ALGC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/algc)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/prt)
+- **ARQC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/arqc)) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/arqc/prt)
+- **CD** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/cd))
+- **EA** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/ea))
 
 ---
 
 ## Contribuir 📩
-Caso queiram adicionar algum do vosso conteúdo, é favor de me contactar ou usar o Git devidamente.
+Caso queiram adicionar algum do vosso conteúdo, é favor de me contactar ou criar um [Pull Request](https://github.com/andreubita/miei/pulls) de acordo com a estrutura do repositório.
 
 ---
 
