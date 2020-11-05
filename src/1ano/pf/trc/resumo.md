@@ -32,6 +32,7 @@ $ f(x) = 2x+10 $
 f x = 2*x+10
 ```
 
+### Função completa
 ```hs
 f :: Float -- ^ Abcissa da função f(x)
   -> Float -- ^ Ordenada da função f(x)
