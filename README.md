@@ -21,8 +21,6 @@
 <hr>
 <br>
 
----
-
 ## Info 📍
 Este repositório tem como objetivo ajudar os alunos de **Engenharia Informártica** a estudar para as diferentes cadeiras do curso. Tive o propósito de juntar o máximo de material possível, de forma organizada e limpa.
 
