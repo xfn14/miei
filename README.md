@@ -41,7 +41,7 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 - **ALGC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/algc)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/prt)
 - **ARQC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/arqc)) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/arqc/prt)
 - **CD** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/cd))
-- **EA** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/ea))
+- **EA** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/ea)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/ea/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/ea/prt)
 
 ---
 
