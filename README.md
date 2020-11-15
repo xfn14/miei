@@ -32,7 +32,9 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 
 ### 1 ano
 
-- **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/pf)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/trc)
+- **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/pf)) - [*Teórica*](https://github.com/andreubita/miei/
+tree/master/src/1ano/pf/trc)
+- **ALGA** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/alga)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/alga/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/alga/prt)
 
 ### 2 ano
 
