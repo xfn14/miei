@@ -32,8 +32,7 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 
 ### 1 ano
 
-- **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/pf)) - [*Teórica*](https://github.com/andreubita/miei/
-tree/master/src/1ano/pf/trc)
+- **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/pf)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/trc)
 - **ALGA** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/alga)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/alga/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/alga/prt)
 
 ### 2 ano
@@ -42,6 +41,7 @@ tree/master/src/1ano/pf/trc)
 - **ARQC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/arqc)) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/arqc/prt)
 - **CD** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/cd))
 - **EA** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/ea)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/ea/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/ea/prt)
+- **EE** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/ee)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/ee/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/ee/prt)
 
 ---
 
