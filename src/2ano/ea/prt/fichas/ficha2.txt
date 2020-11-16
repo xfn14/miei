@@ -1,7 +1,0 @@
-1.
-N=52 cartas
-A_1 = extraçao de um as do baralho
-A_2 = extraçao de uma carta de aspadas do baralho
-    a)
-
-3.
