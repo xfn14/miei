@@ -1,24 +1,5 @@
 module Tester where
 
-initm :: [a] -> [a]
-initm [_] = []
-initm (h:t) = h:(initm t) 
-
-catorze :: [a]
-        -> [[a]]
-catorze [] = []
-catorze l =
-    catorze (initm l) ++ [l]
-
-doze :: Eq a
-     => [a]
-     -> [[a]]
-doze [] = [[]]
-doze [x] = [[x]]
-doze (x:y:z) =
-    if x == y then [x,y]:doze z
-    else [x]:doze(y:z)
-
 d1 :: Dinheiro
 d1 = (D 10 99)    
 
@@ -31,6 +12,12 @@ d3 = (D 2 2)
 data Dinheiro = 
     D Int Int
     deriving(Show, Eq) -- Para o ghci conseguir mostrar no terminal a data.
+
+-- | Calcula a soma entre 'Dinheiro'
+-- >>> adicionaDinheiro d1 d2
+-- D 21 26
+-- >>> adicionaDinheiro d2 $ adicionaDinheiro d1 d3
+-- D 23 28
 adicionaDinheiro :: Dinheiro -- ^ Dinheiro a acrescentar
                  -> Dinheiro -- ^ Dinheiro Base
                  -> Dinheiro -- ^ Dinheiro Final
