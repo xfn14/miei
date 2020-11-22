@@ -169,4 +169,92 @@ myInits l = (myInits $ init l) ++ [l]
 myTails :: [a]
         -> [[a]]
 myTails [] = [[]]
-myTails l@(_:t) = [l] ++ (myTails t)
+myTails l@(_:t) = l:myTails t
+
+-- * Exercício 16
+-- >>> myIsPrefixOf [10,20] [10,20,30]
+-- True
+-- >>> myIsPrefixOf [10,30] [10,20,30]
+-- False
+myIsPrefixOf :: Eq a
+             => [a]
+             -> [a]
+             -> Bool
+myIsPrefixOf [] _ = True
+myIsPrefixOf _ [] = False
+myIsPrefixOf (h:t) (x:y) =
+    h == x && myIsPrefixOf t y
+
+myIsPrefixOf' :: Eq a => [a] -> [a] -> Bool
+myIsPrefixOf' x y = x `elem` myInits y
+
+-- * Exercício 17
+-- >>> myIsSuffixOf [20,30] [10,20,30]
+-- True
+-- >>> myIsSuffixOf [10,30] [10,20,30]
+-- False
+myIsSuffixOf :: Eq a
+             => [a]
+             -> [a]
+             -> Bool
+myIsSuffixOf [] _ = True
+myIsSuffixOf _ [] = False
+myIsSuffixOf l t@(_:r) =
+    l == t || myIsSuffixOf l r
+
+myIsSuffixOf' :: Eq a => [a] -> [a] -> Bool
+myIsSuffixOf' x y = x `elem` myTails y
+
+-- * Exercício 18
+-- >>> myIsSubsequenceOf [20,40] [10,20,30,40]
+-- True
+-- >>> myIsSubsequenceOf [40,20] [10,20,30,40]
+-- False
+myIsSubsequenceOf :: Eq a
+                  => [a]
+                  -> [a]
+                  -> Bool
+myIsSubsequenceOf [] _ = True
+myIsSubsequenceOf _ [] = False
+myIsSubsequenceOf l@(h:t) (x:y) =
+    if h == x then myIsSubsequenceOf t y
+    else myIsSubsequenceOf l y
+
+-- * Exercício 19
+-- >>> myElemIndices 3 [1,2,3,4,3,2,3,4,5]
+-- [2,4,6]
+myElemIndices :: Eq a
+              => a
+              -> [a]
+              -> [Int]
+myElemIndices n l =
+    aux n l 0
+    where
+        aux :: Eq a
+            => a
+            -> [a]
+            -> Int
+            -> [Int]
+        aux _ [] _ = []
+        aux x (h:t) y =
+            if x == h then y:recur
+            else recur
+            where recur = aux x t (y+1)
+
+-- * Exercício 20
+-- >>> myNub [1,2,1,2,3,1,2]
+-- [1,2,3]
+myNub :: Eq a
+      => [a]
+      -> [a]
+myNub l =
+    aux l []
+    where
+        aux :: Eq a
+            => [a]
+            -> [a]
+            -> [a]
+        aux [] x = x
+        aux (h:t) x =
+            if h `elem` x then aux t x
+            else aux t (x++[h])
