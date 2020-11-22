@@ -22,6 +22,7 @@
 <br>
 
 ## Info 📍
+
 Este repositório tem como objetivo ajudar os alunos de **Engenharia Informártica** a estudar para as diferentes cadeiras do curso. Tive o propósito de juntar o máximo de material possível, de forma organizada e limpa.
 
 O material presente neste repositório não é todo da minha autoria, por isso caso o autor de determinado documento não pretenda que tal seja partilhado, por favor tente me contactar ou então criar uma [Issue](https://github.com/andreubita/miei/issues).
@@ -32,7 +33,7 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 
 ### 1 ano
 
-- **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/pf)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/trc)
+- **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/pf)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/prt)
 - **ALGA** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/alga)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/alga/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/alga/prt)
 
 ### 2 ano
