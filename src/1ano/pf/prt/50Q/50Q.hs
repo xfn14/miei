@@ -258,3 +258,79 @@ myNub l =
         aux (h:t) x =
             if h `elem` x then aux t x
             else aux t (x++[h])
+
+-- * Exercício 21
+-- >>> myDelete 2 [1,2,1,2,3,1,2]
+-- [1,1,2,3,1,2]
+myDelete :: Eq a
+         => a
+         -> [a]
+         -> [a]
+myDelete _ [] = []
+myDelete n (h:t) =
+    if n == h then t
+    else h:myDelete n t
+
+-- * Exercício 22
+-- >>> myRemove [5,1,2,3,4,1] [1,5]
+-- [2,3,4,1]
+myRemove :: Eq a
+         => [a]
+         -> [a]
+         -> [a]
+myRemove [] _ = []
+myRemove l [] = l
+myRemove l (h:t) = 
+    myRemove (myDelete h l) t
+
+-- * Exercício 23
+-- >>> myUnion [1,1,2,3,4] [1,5]
+-- [1,1,2,3,4,5]
+myUnion :: Eq a
+        => [a]
+        -> [a]
+        -> [a]
+myUnion [] l = l
+myUnion l [] = l
+myUnion l (x:y) =
+    if x `elem` l then myUnion l y
+    else myUnion (l++[x]) y
+
+-- * Exercício 24
+-- >>> myIntersect [1,1,2,3,4] [1,3,5]
+-- [1,1,3]
+myIntersect :: Eq a
+            => [a]
+            -> [a]
+            -> [a]
+myIntersect [] _ = []
+myIntersect _ [] = []
+myIntersect l1@(h:t) l2 =
+    if length l2 <= length l1 then
+        if h `elem` l2 then h:myIntersect t l2
+        else myIntersect t l2
+    else myIntersect l2 l1
+
+-- * Exercício 25
+-- >>> myInsert 25 [1,20,30,40]
+-- [1,20,25,30,40]
+myInsert :: Ord a
+         => a
+         -> [a]
+         -> [a]
+myInsert n [] = [n]
+myInsert n (h:t) =
+    if n > h then h:myInsert n t
+    else n:h:t
+
+-- Complicar para que...
+myInsert' :: Ord a => a -> [a] -> [a]
+myInsert' n [] = [n]
+myInsert' n [x] =
+    if n > x then [x,n]
+    else [n,x]
+myInsert' n l@(x:y:z) =
+    if n > x then
+        if n < y then [x,n,y]++z
+        else x:myInsert n (y:z)
+    else n:l
