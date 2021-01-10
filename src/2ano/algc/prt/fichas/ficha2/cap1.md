@@ -26,4 +26,9 @@ int lsearch(int a[], int N, int x){
 
 ### 1.a
 
-> Para cada um dos algoritmos, calcule o n ́umero de opera ̧c ̃oes primitivas de acessoao vector de entrada executadas, em fun ̧c ̃ao do tamanho desse vector.
+> Para cada um dos algoritmos, calcule o número de operaçoes primitivas de acessoao vector de entrada executadas, em função do tamanho desse vector.
+
+###### Resposta
+
+```
+```
