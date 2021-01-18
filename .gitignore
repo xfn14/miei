@@ -1,3 +1,5 @@
+.ignore
+
 # Comment when gradle auto-import is off.
 # .idea/artifacts
 # .idea/compiler.xml

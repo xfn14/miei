@@ -3,7 +3,7 @@
     tentativa de quantificar a informaçao de uma mensagem, baseando-se na probabilidade de essa mensagem se tornar realidade
 
     ii)
-    informaçao media (por simbolo/mensage) gerada pela fonte
+    informaçao media (por simbolo/mensagem) gerada pela fonte
 
     iii)
     quantidade de informaçao util gerada por segundo pela fonte

@@ -1,0 +1,21 @@
+# Mercado
+
+```
+RT = P * Q
+RMg = δRT / δQ
+π = RT – CT
+CMg = δCT / δQ
+CMT = CT / Q
+CVT = CVM * Q
+CFT = CFM * Q
+CT = CVT + CFT
+```
+
+```
+δπ / δQ = 0 => RMg = CMg // Condiçao de maximizaçao de lucro
+P = CMg // Decisão de quantidade a produzir (curto prazo)
+CMg = CMT // Decisão de quantidade a produzir (longo prazo)
+π = 0 && RT = CT => P = CMT // Decisão do preço a praticar (longo prazo)
+RMg = CMg // Condição de maximização de lucro (monopolio)
+δRT/δQ = 0 => RMg = 0 // // Condição de maximização de vendas (monopolio)
+```
