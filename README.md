@@ -36,6 +36,8 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 - **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/pf)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/prt)
 - **ALGA** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/alga)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/alga/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/alga/prt)
 
+<!-- TODO Change dirs to new fs-->
+
 ### 2 ano
 
 - **ALGC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/algc)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/prt)
