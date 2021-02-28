@@ -4,7 +4,7 @@
     <module name="iiex5" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="com.andreubita.poo.*" />
+        <option name="PATTERN" value="com.andreubita.poo.ficha1.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

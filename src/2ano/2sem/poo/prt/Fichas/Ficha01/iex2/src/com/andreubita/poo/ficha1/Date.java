@@ -1,4 +1,4 @@
-package com.andreubita.poo;
+package com.andreubita.poo.ficha1;
 
 public class Date {
     private int day;
