@@ -67,4 +67,14 @@ public class Date {
     public int getSecond() {
         return second;
     }
+
+    @Override
+    public String toString() {
+        return "Date{" +
+                "day=" + day +
+                ", hour=" + hour +
+                ", minute=" + minute +
+                ", second=" + second +
+                '}';
+    }
 }
