@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ex04 {
+    // TODO Redo with just 4 vars
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("De quantas temperaturas pertende obter as médias?");
@@ -26,7 +27,7 @@ public class Ex04 {
         if(biggestVar == 0){
             System.out.println("A temperatura manteve-se sempre igual");
         }else{
-            System.out.println("A maior variação registou-se entre os dois " + (biggestVarTuple.x + 1) + " e " + (biggestVarTuple.y + 1)
+            System.out.println("A maior variação registou-se entre os dias " + (biggestVarTuple.x + 1) + " e " + (biggestVarTuple.y + 1)
                     + ", tendo a temperatura " + (biggestVar > 0 ? "subido ": "descido ") + Math.abs(biggestVar) + " graus");
         }
     }
