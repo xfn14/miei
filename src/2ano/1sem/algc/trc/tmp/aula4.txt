@@ -1,0 +1,61 @@
+Aula T5 (23.out.2020)
+
+pre{
+    forall 0<=i<N A[i] == a_i &&
+    forall 0<=i<N-1 a_i <=a_i+1 &&
+    x == x_0
+}
+
+pos{ 
+    forall 0<=i<N A[i] == a_i &&
+    ((r == -1 && forall 0<=i<N a_i != x_0) 
+        || 
+    (0<=r<N && x_0 == a_r))
+}
+
+// Pega no primeiro elemento
+// Percorre menos ciclos
+int proc1(int x, int A[], int N){
+    int i, r = -1;
+    for(i=0;r==-1 && i<N; i++){
+        if(A[i] == x) r = i;
+    }
+    return r;
+}
+
+// Pega no ultimo elemento
+// Percorre mais ciclos
+int proc2(int x, int A[], int N){
+    int i, r = -1;
+    for(i=0;i<N; i++){
+        if(A[i] == x) r = i;
+    }
+    return r;
+}
+
+int proc3(int x, int A[], int N){
+    int i, r = -1;
+    for(i=0;r==-1 && i<N && A[i]<=x; i++){
+        if(A[i] == x) r = i;
+    }
+    return r;
+}
+
+Custos:
+    - tempo
+    - memoria
+    - energia
+    ...
+
+Análise de complexidade (analise do tempo de execuçao de um programa)
+
+
+----------------------
+Quanto custa executar procura1?
+Depende de:
+    1. Tamanho do input (nº minimo de bits necessario para representar o input)
+    (1+N+1)*nº de bits usados para rep int
+    Tamanho de input é o nº de elementos do array A.
+    T(N) = ... N ...
+    
+    continua na aula seguinte...

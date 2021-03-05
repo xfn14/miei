@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Ex03 {
     public static void main(String[] args) {
+        // TODO exercicio mal interpretado
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insira notas. (quando acabar intruduza \"q\")");
         boolean done = false;

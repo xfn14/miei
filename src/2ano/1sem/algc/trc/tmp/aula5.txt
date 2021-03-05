@@ -1,0 +1,69 @@
+Aula T6 (26.Out.2020)
+
+...continuaçao da outra aula
+
+    2. Valores do input
+    Analisando casos
+        a) Melhor caso
+        b) Pior caso
+        c) Analise do caso medio
+
+    3. Maquina
+    O tempo que cada instruçao demora a executar
+        a) Atribuiçoes
+        b) Comparaçoes
+        c) Acesso ao array
+        d) Incremento
+
+
+    EXEMPLO (Custo a executar)
+
+        r=-1;
+        for(i=0;r==-1 && i<N; i++){
+            if(A[i] == x) r = i;
+        }
+
+    sabendo que:
+    1. Tamanho do input: N
+    2. Melhor caso (a[0] = x)
+    3. Atribuiçoes     c1
+       Comparaçoes     c2
+       Acesso ao array c3
+       Incremento      c4
+       &&              c5
+
+    T(N) = c1 + c1 + c2 + c5 + c2 + c3 + c2 + c1 + c4 + c2 + c5
+         = K1
+    
+-------------------------------------------------------------
+
+    No pior caso (forall 0<=i<N A[i]!=x)
+
+    T(N) = c1 + c1 + (2*c2 + c5 + c2 + c3 + c4) * N + 2*c2 + c5
+         = K1 + K2*N
+         where
+            K1 = c1 + c1 + 2*c2 + c5
+            K2 = 2*c2 + c5 + c2 + c3 + c4
+
+---------------------------------------------------------------------------
+
+Analise do procura3 (Procura com array ordenado)
+
+int proc3(int x, int A[], int N){
+    int i, r = -1;
+    for(i=0;r==-1 && i<N && A[i]<=x; i++){
+        if(A[i] == x) r = i;
+    }
+    return r;
+}
+
+    1. Tamanho do input: tamanho do array A (N)
+    2. Valores do input
+        Melhor caso: A[0] > x
+        T(N) = K1
+
+    Pior Caso: 
+        A[N-1] <= x
+        forall 0<=i<N A[i]<= x
+
+    T(N) = K1 + K2*N
