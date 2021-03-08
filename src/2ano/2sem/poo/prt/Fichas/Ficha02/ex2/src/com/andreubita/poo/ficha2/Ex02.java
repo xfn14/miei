@@ -3,8 +3,8 @@ package com.andreubita.poo.ficha2;
 public class Ex02 {
 
     private final int[][] notasTurma = new int[5][5];
-    private final int n_alunos = this.notasTurma.clone().length;
-    private final int n_ucs = this.notasTurma.clone()[0].clone().length;
+    private final int n_alunos = this.notasTurma.length;
+    private final int n_ucs = this.notasTurma[0].length;
 
     public static void main(String[] args) {
         Ex02 ex02 = new Ex02();
@@ -14,11 +14,11 @@ public class Ex02 {
     }
 
     public int getNota(int aluno, int uc){
-        return this.notasTurma.clone()[aluno][uc];
+        return this.notasTurma[aluno][uc];
     }
 
     public void setNotasTurma(int aluno, int uc, int nota) {
-        this.notasTurma.clone()[aluno][uc] = nota;
+        this.notasTurma[aluno][uc] = nota;
     }
 
     public int getSomaUC(int uc){
@@ -78,7 +78,7 @@ public class Ex02 {
                 }
             }
         }
-        return notas.clone();
+        return notas;
     }
 
     public String toString(){

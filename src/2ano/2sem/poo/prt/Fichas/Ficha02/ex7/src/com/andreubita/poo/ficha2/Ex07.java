@@ -1,7 +1,6 @@
 package com.andreubita.poo.ficha2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
