@@ -41,6 +41,6 @@ public class Ex03 {
 
     @Override
     public String toString() {
-        return "notasTurma: " + Arrays.toString(datasArr);
+        return Arrays.toString(datasArr);
     }
 }

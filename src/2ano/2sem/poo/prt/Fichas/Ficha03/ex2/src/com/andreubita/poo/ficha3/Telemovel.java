@@ -1,125 +1,176 @@
 package com.andreubita.poo.ficha3;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Telemovel {
-    private String marca;
-    private String modelo;
+
+    // Object variables ----------------------
+    private String brand;
+    private String model;
+
     private int displayX;
     private int displayY;
-    private int dimTotal;
-    private int dimOcupada;
-    private String[] mensagens;
-    private int dimMensagens;
-    private int dimFotos;
-    private int dimApps;
-    private String[] nomeApps;
 
+    // Values represented in bytes
+    private int storageTotal;
+    private int storagePhotos;
+    private int storageMessages;
+    private int storageApps;
+
+    private String[] messages;
+    private String[] apps;
+
+    private int numPhotos;
+    private int numMessages;
+    private int numApps;
+    // ---------------------------------------
+
+    // Empty constructor
     public Telemovel(){
-        this.marca = "RAW";
-        this.modelo = "k1";
-        this.displayX = 1920;
-        this.displayY = 1080;
-        this.dimTotal = 1000;
-        this.dimOcupada = 0;
-        this.mensagens = new String[100];
-        this.dimMensagens = 0;
-        this.dimFotos = 0;
-        this.dimApps = 0;
-        this.nomeApps = new String[100];
+        this.brand = "OnePlus";
+        this.model = "7T";
+
+        this.displayX = 1080;
+        this.displayY = 2400;
+
+        this.storageTotal = 128000; // imagine 128gb
+        this.storagePhotos = 0;
+        this.storageMessages = 0;
+        this.storageApps = 0;
+
+        this.messages = new String[10];
+        this.apps = new String[10];
+
+        this.numPhotos = 0;
+        this.numMessages = 0;
+        this.numApps = 0;
     }
 
-    public Telemovel(String marca, String modelo, int displayX, int displayY, int dimTotal,
-                     int dimOcupada, String[] mensagens, int dimMensagens, int dimFotos,
-                     int dimApps, String[] nomeApps){
-        this.marca = marca;
-        this.modelo = modelo;
+    // Full variable constructor
+    public Telemovel(String brand, String model, int displayX, int displayY, int storageTotal,
+                     int storagePhotos, int storageMessages, int storageApps, String[] messages,
+                     String[] apps, int numPhotos, int numMessages, int numApps) {
+        this.brand = brand;
+        this.model = model;
+
         this.displayX = displayX;
         this.displayY = displayY;
-        this.dimTotal = dimTotal;
-        this.dimOcupada = dimOcupada;
-        setMensagens(mensagens);
-        this.dimMensagens = dimMensagens;
-        this.dimFotos = dimFotos;
-        this.dimApps = dimApps;
-        setNomeApps(nomeApps);
+
+        this.storageTotal = storageTotal;
+        this.storagePhotos = storagePhotos;
+        this.storageMessages = storageMessages;
+        this.storageApps = storageApps;
+
+        setMessages(messages);
+        setApps(apps);
+
+        this.numPhotos = numPhotos;
+        this.numMessages = numMessages;
+        this.numApps = numApps;
     }
 
-    public Telemovel(Telemovel t){
-        setMarca(t.getMarca());
-        setModelo(t.getModelo());
-        setDisplayX(t.getDisplayX());
-        setDisplayY(t.getDisplayY());
-        setDimTotal(t.getDimTotal());
-        setDimOcupada(t.getDimOcupada());
-        setMensagens(t.getMensagens());
-        setDimMensagens(t.getDimMensagens());
-        setDimFotos(t.getDimFotos());
-        setDimApps(t.getDimApps());
-        setNomeApps(t.getNomeApps());
+    // Clone constructor
+    public Telemovel(Telemovel telemovel){
+        this.brand = telemovel.getBrand();
+        this.model = telemovel.getModel();
+
+        this.displayX = telemovel.getDisplayX();
+        this.displayY = telemovel.getDisplayY();
+
+        this.storageTotal = telemovel.getStorageTotal();
+        this.storagePhotos = telemovel.getStoragePhotos();
+        this.storageMessages = telemovel.getStorageMessages();
+        this.storageApps = telemovel.getStorageApps();
+
+        setMessages(telemovel.getMessages());
+        setApps(telemovel.getApps());
+
+        this.numPhotos = telemovel.getNumPhotos();
+        this.numMessages = telemovel.getNumMessages();
+        this.numApps = telemovel.getNumApps();
     }
 
-    public boolean existeEspaço(int numeroBytes){
-        return getDimTotal() >= (getDimOcupada() + numeroBytes);
+    public boolean hasSpace(int bytes){
+        return getStorageTotal() >= (getStorageOccupied() + bytes);
     }
 
-    public void instalaApp(String nome, int tamanho){
-        if(!(existeEspaço(tamanho) || (containsNomeApp(nome) != -1))) {
-            addNomeApps(nome);
-            setDimOcupada(getDimOcupada() + tamanho);
-        }
+    public void installApp(String name, int size){
+        // Check if phone has space to install app or if the app is already installed
+        if(!hasSpace(size) || hasApp(name)) return;
+
+        // Realloc apps array in case it doesn't have space
+        if(this.numApps >= this.apps.length)
+            this.apps = Arrays.copyOf(this.apps, this.apps.length*2);
+
+        // Install app
+        this.apps[this.numApps++] = name;
+        this.storageApps += size;
     }
 
-    public void recebeMsg(String msg){
-        addMensagem(msg);
+    public void receiveMessage(String msg){
+        if(this.numMessages >= this.messages.length)
+            this.messages = Arrays.copyOf(this.messages, this.messages.length);
+        this.messages[this.numMessages++] = msg;
     }
 
-    public double tamMedioApps(){
-        return (double) getDimOcupada() / getDimApps();
+    public void receiveMessage(String msg, int size){
+        receiveMessage(msg);
+        this.storageMessages += size;
     }
 
-    public String maiorMsg(){
-        String maior = "";
-        for (int i = 0; i < getDimMensagens(); i++) {
-            if(this.mensagens[i].length() > maior.length()){
-                // maior = new String(this.mensagens[i]); é desnecessario
-                maior = this.mensagens[i];
+    public double appMedSize(){
+        return (double) getStorageApps() / getNumApps();
+    }
+
+    public String biggestMessage(){
+        String msg = "";
+        for (int i = 0; i < getNumMessages(); i++) {
+            if(this.messages[i].length() > msg.length()){
+                msg = this.messages[i];
             }
         }
-        return maior;
+        return msg;
     }
 
-    public void removeApp(String nome, int tamanho){
-        int exists = containsNomeApp(nome);
-        if(exists != -1){
-//            for (int i = exists; i < getDimApps(); i++) {
-//                this.nomeApps[i] = this.nomeApps[i+1];
-//            }
-            if (getDimApps() - exists >= 0)
-                System.arraycopy(this.nomeApps, exists + 1, this.nomeApps, exists, getDimApps() - exists);
-            this.dimApps--;
+    public void removeApp(String name, int size){
+        // Check if app is installed
+        if(!hasApp(name)) return;
+
+        // Remove app from array
+        boolean found = false;
+        for (int i = 0; i < this.numApps; i++) {
+            if(this.apps[i].equals(name)) found = true;
+
+            if(found && i != (this.numApps-1)) this.apps[i] = "";
+            else if(found) this.apps[i] = this.apps[i+1];
         }
+
+        this.numApps--;
+        this.storageApps -= size;
     }
 
-    public String getMarca() {
-        return this.marca;
+    public double getStorageOccupied(){
+        return getStorageApps() + getStoragePhotos() + getStorageMessages();
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public String getBrand() {
+        return brand;
     }
 
-    public String getModelo() {
-        return this.modelo;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public int getDisplayX() {
-        return this.displayX;
+        return displayX;
     }
 
     public void setDisplayX(int displayX) {
@@ -127,88 +178,95 @@ public class Telemovel {
     }
 
     public int getDisplayY() {
-        return this.displayY;
+        return displayY;
     }
 
     public void setDisplayY(int displayY) {
         this.displayY = displayY;
     }
 
-    public int getDimTotal() {
-        return this.dimTotal;
+    public int getStorageTotal() {
+        return storageTotal;
     }
 
-    public void setDimTotal(int dimTotal) {
-        this.dimTotal = dimTotal;
+    public void setStorageTotal(int storageTotal) {
+        this.storageTotal = storageTotal;
     }
 
-    public int getDimOcupada() {
-        return this.dimOcupada;
+    public int getStoragePhotos() {
+        return storagePhotos;
     }
 
-    public void setDimOcupada(int dimOcupada) {
-        this.dimOcupada = dimOcupada;
+    public void setStoragePhotos(int storagePhotos) {
+        this.storagePhotos = storagePhotos;
     }
 
-    public String[] getMensagens() {
-        return Arrays.copyOf(this.mensagens, this.mensagens.length);
+    public int getStorageMessages() {
+        return storageMessages;
     }
 
-    public void setMensagens(String[] mensagens) {
-        this.mensagens = Arrays.copyOf(mensagens, mensagens.length);
+    public void setStorageMessages(int storageMessages) {
+        this.storageMessages = storageMessages;
     }
 
-    public void addMensagem(String mensagem){
-        if(this.dimMensagens == this.mensagens.length)
-            this.mensagens = Arrays.copyOf(this.mensagens, this.mensagens.length*2);
-        this.mensagens[this.dimMensagens++] = mensagem;
+    public int getStorageApps() {
+        return storageApps;
     }
 
-    public int getDimMensagens() {
-        return this.dimMensagens;
+    public void setStorageApps(int storageApps) {
+        this.storageApps = storageApps;
     }
 
-    public void setDimMensagens(int dimMensagens) {
-        this.dimMensagens = dimMensagens;
+    public String[] getMessages() {
+        return Arrays.copyOf(this.messages, this.numMessages);
     }
 
-    public int getDimFotos() {
-        return this.dimFotos;
+    public void setMessages(String[] messages) {
+        this.messages = Arrays.copyOf(messages, messages.length);
     }
 
-    public void setDimFotos(int dimFotos) {
-        this.dimFotos = dimFotos;
+    public String[] getApps() {
+        return Arrays.copyOf(this.apps, this.numApps);
     }
 
-    public int getDimApps() {
-        return this.dimApps;
+    public void setApps(String[] apps) {
+        this.apps = Arrays.copyOf(apps, apps.length);
     }
 
-    public void setDimApps(int dimApps) {
-        this.dimApps = dimApps;
-    }
-
-    public String[] getNomeApps() {
-        return Arrays.copyOf(this.nomeApps, this.nomeApps.length);
-    }
-
-    public void setNomeApps(String[] nomeApps) {
-        this.nomeApps = Arrays.copyOf(nomeApps, nomeApps.length);
-    }
-
-    public int containsNomeApp(String nome){
-        for (int i = 0; i < getDimApps(); i++) {
-            if(getNomeApps()[i].equals(nome)){
-                return i;
-            }
+    public boolean hasApp(String name){
+        for (int i = 0; i < this.numApps; i++) {
+            if(this.apps[i].equals(name)) return true;
         }
-        return -1;
+        return false;
     }
 
-    public void addNomeApps(String nome){
-        if(this.dimApps == this.nomeApps.length)
-            this.nomeApps = Arrays.copyOf(this.nomeApps, this.nomeApps.length*2);
-        this.nomeApps[this.dimApps++] = nome;
+    public int getNumPhotos() {
+        return numPhotos;
+    }
+
+    public void setNumPhotos(int numPhotos) {
+        this.numPhotos = numPhotos;
+    }
+
+    public int getNumMessages() {
+        return numMessages;
+    }
+
+    public void setNumMessages(int numMessages) {
+        this.numMessages = numMessages;
+    }
+
+    public int getNumApps() {
+        return numApps;
+    }
+
+    public void setNumApps(int numApps) {
+        this.numApps = numApps;
+    }
+
+    @Override
+    public Telemovel clone(){
+        return new Telemovel(this);
     }
 
     @Override
@@ -218,36 +276,35 @@ public class Telemovel {
         Telemovel telemovel = (Telemovel) o;
         return getDisplayX() == telemovel.getDisplayX() &&
                 getDisplayY() == telemovel.getDisplayY() &&
-                getDimTotal() == telemovel.getDimTotal() &&
-                getDimOcupada() == telemovel.getDimOcupada() &&
-                getDimMensagens() == telemovel.getDimMensagens() &&
-                getDimFotos() == telemovel.getDimFotos() &&
-                getDimApps() == telemovel.getDimApps() &&
-                getMarca().equals(telemovel.getMarca()) &&
-                getModelo().equals(telemovel.getModelo()) &&
-                Arrays.equals(getMensagens(), telemovel.getMensagens()) &&
-                Arrays.equals(getNomeApps(), telemovel.getNomeApps());
-    }
-
-    @Override
-    public Object clone() {
-        return new Telemovel(this);
+                getStorageTotal() == telemovel.getStorageTotal() &&
+                getStoragePhotos() == telemovel.getStoragePhotos() &&
+                getStorageMessages() == telemovel.getStorageMessages() &&
+                getStorageApps() == telemovel.getStorageApps() &&
+                getNumPhotos() == telemovel.getNumPhotos() &&
+                getNumMessages() == telemovel.getNumMessages() &&
+                getNumApps() == telemovel.getNumApps() &&
+                getBrand().equals(telemovel.getBrand()) &&
+                getModel().equals(telemovel.getModel()) &&
+                Arrays.equals(getMessages(), telemovel.getMessages()) &&
+                Arrays.equals(getApps(), telemovel.getApps());
     }
 
     @Override
     public String toString() {
         return "Telemovel{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
                 ", displayX=" + displayX +
                 ", displayY=" + displayY +
-                ", dimTotal=" + dimTotal +
-                ", dimOcupada=" + dimOcupada +
-                ", mensagens=" + Arrays.toString(mensagens) +
-                ", dimMensagens=" + dimMensagens +
-                ", dimFotos=" + dimFotos +
-                ", dimApps=" + dimApps +
-                ", nomeApps=" + Arrays.toString(nomeApps) +
+                ", storageTotal=" + storageTotal +
+                ", storagePhotos=" + storagePhotos +
+                ", storageMessages=" + storageMessages +
+                ", storageApps=" + storageApps +
+                ", messages=" + Arrays.toString(messages) +
+                ", apps=" + Arrays.toString(apps) +
+                ", numPhotos=" + numPhotos +
+                ", numMessages=" + numMessages +
+                ", numApps=" + numApps +
                 '}';
     }
 }
