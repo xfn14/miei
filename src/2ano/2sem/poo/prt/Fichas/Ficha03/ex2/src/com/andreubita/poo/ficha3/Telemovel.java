@@ -141,7 +141,7 @@ public class Telemovel {
         for (int i = 0; i < this.numApps; i++) {
             if(this.apps[i].equals(name)) found = true;
 
-            if(found && i != (this.numApps-1)) this.apps[i] = "";
+            if(found && i == (this.numApps-1)) this.apps[i] = null;
             else if(found) this.apps[i] = this.apps[i+1];
         }
 
