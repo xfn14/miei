@@ -26,6 +26,7 @@ public class Ex06 {
                 quit = true;
             }
         }
+        scanner.close();
     }
 
     public boolean isPrime(int n){

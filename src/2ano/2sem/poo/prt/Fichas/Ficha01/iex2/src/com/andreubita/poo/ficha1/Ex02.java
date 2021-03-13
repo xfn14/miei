@@ -30,5 +30,6 @@ public class Ex02 {
         }catch (NumberFormatException e){
             System.out.println("Numero invalido");
         }
+        scanner.close();
     }
 }

@@ -10,6 +10,7 @@ public class Ex02 {
         Ex02 ex02 = new Ex02();
         int max = ex02.maximoNumeros(a, b);
         System.out.println("Entre " + a + " e " + b + " o maior é o " + max);
+        scanner.close();
     }
 
     public int maximoNumeros(int a, int b){

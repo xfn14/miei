@@ -19,6 +19,7 @@ public class Ex05 {
                 done = true;
             }
         }
+        scanner.close();
     }
 
     public double calcArea(double base, double height){

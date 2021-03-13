@@ -10,6 +10,7 @@ public class Ex01 {
         Ex01 ex01 = new Ex01();
         double res = ex01.celsiusParaFarenheit(graus);
         System.out.println(graus + "ºC corresponde a " + res + "ºF");
+        scanner.close();
     }
 
     public double celsiusParaFarenheit(double graus){

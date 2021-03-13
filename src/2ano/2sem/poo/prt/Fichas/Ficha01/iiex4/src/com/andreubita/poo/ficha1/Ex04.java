@@ -11,6 +11,7 @@ public class Ex04 {
         System.out.println("Insira a taxa de conversao para libras.");
         tax = scanner.nextDouble();
         ex04.eurosParaLibras(val, tax);
+        scanner.close();
     }
 
     public double eurosParaLibras(double valor, double taxaConversao){

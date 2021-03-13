@@ -25,6 +25,7 @@ public class Ex01 {
         }catch (NumberFormatException e){
             System.out.println("Numero invalido.");
         }
+        scanner.close();
     }
 
     public int calcDaysBefore(int day, int month, int year){

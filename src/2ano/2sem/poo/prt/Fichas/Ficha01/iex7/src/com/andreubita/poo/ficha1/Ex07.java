@@ -29,5 +29,6 @@ public class Ex07 {
         } catch (ParseException e) {
             System.out.print("Data invalida");
         }
+        scanner.close();
     }
 }

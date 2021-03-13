@@ -30,6 +30,7 @@ public class Ex04 {
             System.out.println("A maior variação registou-se entre os dias " + (biggestVarTuple.x + 1) + " e " + (biggestVarTuple.y + 1)
                     + ", tendo a temperatura " + (biggestVar > 0 ? "subido ": "descido ") + Math.abs(biggestVar) + " graus");
         }
+        scanner.close();
     }
 
     public Tuple<Integer,Integer> getBiggestVar(ArrayList<Double> temps){
