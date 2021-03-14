@@ -45,14 +45,17 @@ public class Lamp {
     }
 
     public void lampON(){
+        if(this.switches.get(this.switches.size()-1).y.equals(State.ON)) return;
         this.switches.add(new Tuple<>(Instant.now(), State.ON));
     }
 
     public void lampECO(){
+        if(this.switches.get(this.switches.size()-1).y.equals(State.ECO)) return;
         this.switches.add(new Tuple<>(Instant.now(), State.ECO));
     }
 
     public void lampOFF(){
+        if(this.switches.get(this.switches.size()-1).y.equals(State.OFF)) return;
         this.switches.add(new Tuple<>(Instant.now(), State.OFF));
     }
 
