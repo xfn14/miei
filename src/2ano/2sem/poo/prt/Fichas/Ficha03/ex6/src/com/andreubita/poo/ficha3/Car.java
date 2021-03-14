@@ -12,6 +12,7 @@ public class Car {
     private double kmsLastRide;
     private double meanConsumptionLastRide;
     private double regenCap;
+    private boolean on;
 
     public Car(){
         this.brand = "Tesla";
@@ -23,11 +24,12 @@ public class Car {
         this.kmsLastRide = 0;
         this.meanConsumptionLastRide = 0;
         this.regenCap = 0.5;
+        this.on = false;
     }
 
     public Car(String brand, String model, int yearManufacture, double consumptionRate,
                double kmsDone, double meanConsumption, double kmsLastRide,
-               double meanConsumptionLastRide, double regenCap) {
+               double meanConsumptionLastRide, double regenCap, boolean on) {
         this.brand = brand;
         this.model = model;
         this.yearManufacture = yearManufacture;
@@ -37,6 +39,7 @@ public class Car {
         this.kmsLastRide = kmsLastRide;
         this.meanConsumptionLastRide = meanConsumptionLastRide;
         this.regenCap = regenCap;
+        this.on = on;
     }
 
     public Car(Car car){
@@ -49,6 +52,39 @@ public class Car {
         this.kmsLastRide = car.getKmsLastRide();
         this.meanConsumptionLastRide = car.getMeanConsumptionLastRide();
         this.regenCap = car.getRegenCap();
+        this.on = car.isOn();
+    }
+
+    public void turnOn(){
+        resetUltimaViagem();
+        setOn(true);
+    }
+
+    public void turnOff(){
+        setOn(false);
+    }
+
+    public void resetUltimaViagem(){
+        this.kmsLastRide = 0;
+        this.meanConsumptionLastRide = 0;
+    }
+
+    public void move(double dis, double vel){
+        if(!isOn()) return;
+        this.kmsDone += dis;
+        this.meanConsumption += calcConsumptionVel(dis, vel);
+        this.kmsLastRide += dis;
+        this.meanConsumptionLastRide += calcConsumptionVel(dis, vel);
+    }
+
+    public void brake(double dis){
+        if(!isOn()) return;
+        this.meanConsumption -= this.regenCap * dis;
+        this.meanConsumptionLastRide -= this.regenCap * dis;
+    }
+
+    public double calcConsumptionVel(double dis, double vel){
+        return ((this.consumptionRate * vel) / 100 ) * dis;
     }
 
     public String getBrand() {
@@ -121,6 +157,14 @@ public class Car {
 
     public void setRegenCap(double regenCap) {
         this.regenCap = regenCap;
+    }
+
+    public boolean isOn() {
+        return on;
+    }
+
+    public void setOn(boolean on) {
+        this.on = on;
     }
 
     @Override
