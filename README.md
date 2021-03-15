@@ -31,40 +31,43 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 
 ## Contents
 
-### 1 ano
+### 1ano1sem
 
-- **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/pf)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/pf/prt)
-- **ALGA** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/alga)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/alga/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/alga/prt)
+- **PF** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/pf)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/pf/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/pf/prt)
+- **ALGA** ([root](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/alga)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/alga/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/alga/prt)
 
-<!-- TODO Change dirs to new fs-->
+### 2ano1sem
 
-### 2 ano
+- **ALGC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/algc)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/algc/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/algc/prt)
+- **ARQC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/arqc)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/arqc/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/arqc/prt)
+- **CD** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/cd))
+- **EA** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/ea)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/ea/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/ea/prt)
+- **EE** ([root](https://github.com/andreubita/miei/tree/master/src/1sem/2ano/ee)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/ee/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/ee/prt)
 
-- **ALGC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/algc)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/algc/prt)
-- **ARQC** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/arqc)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/arqc/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/arqc/prt)
-- **CD** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/cd))
-- **EA** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/ea)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/ea/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/ea/prt)
-- **EE** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/ee)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/ee/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/ee/prt)
+### 2ano2sem
+
+- **POO** ([root](https://github.com/andreubita/miei/tree/master/src/2ano/2sem/poo)) - [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/2sem/poo/trc) - [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/2sem/poo/prt)
 
 ---
 
 ## Contribuir 📩
+
 Caso queiram adicionar algum do vosso conteúdo, é favor de me contactar ou criar um [Pull Request](https://github.com/andreubita/miei/pulls) de acordo com a estrutura do repositório.
 
 ---
 
 ## Links úteis 🔗
 
-MIEI: https://miei.di.uminho.pt/
+MIEI: <https://miei.di.uminho.pt/>
 
-Repositório UMinho: https://repositorium.sdum.uminho.pt/
+Repositório UMinho: <https://repositorium.sdum.uminho.pt/>
 
-Reservar Gabinetes: https://reservas.sdum.uminho.pt/
+Reservar Gabinetes: <https://reservas.sdum.uminho.pt/>
 
-Campi: https://campi.uminho.pt/
+Campi: <https://campi.uminho.pt/>
 
-Blackboard: https://elearning.uminho.pt/
+Blackboard: <https://elearning.uminho.pt/>
 
-Calendário MIEI: http://bit.ly/calendariomiei
+Calendário MIEI: <http://bit.ly/calendariomiei>
 
 ---
