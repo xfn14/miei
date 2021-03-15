@@ -2,9 +2,9 @@ package com.andreubita.poo.ficha2;
 
 public class Ex02 {
 
-    private final int[][] notasTurma = new int[5][5];
-    private final int n_alunos = this.notasTurma.length;
-    private final int n_ucs = this.notasTurma[0].length;
+    private int[][] notasTurma = new int[5][5];
+    private int n_alunos = this.notasTurma.length;
+    private int n_ucs = this.notasTurma[0].length;
 
     public static void main(String[] args) {
         Ex02 ex02 = new Ex02();
@@ -14,11 +14,18 @@ public class Ex02 {
     }
 
     public int getNota(int aluno, int uc){
-        return this.notasTurma[aluno][uc];
+        int[][] newArr = new int[5][5];
+        for (int i = 0; i < 5; i++)
+            System.arraycopy(this.notasTurma[i], 0, newArr[i], 0, 5);
+        return newArr[aluno][uc];
     }
 
     public void setNotasTurma(int aluno, int uc, int nota) {
-        this.notasTurma[aluno][uc] = nota;
+        int[][] newArr = new int[5][5];
+        for (int i = 0; i < 5; i++)
+            System.arraycopy(this.notasTurma[i], 0, newArr[i], 0, 5);
+        newArr[aluno][uc] = nota;
+        this.notasTurma = newArr;
     }
 
     public int getSomaUC(int uc){
