@@ -84,7 +84,7 @@ public class Ex06 {
         for (int i = 0; i < lin; i++){
             System.out.print("[");
             for (int j = 0; j < col; j++)
-                System.out.print(getElem(matrix, i, j) + (j == col-1 ? "" : ","));
+                System.out.print(getElem(matrix, i, j) + (j == col-1 ? "" : ", "));
             System.out.print("]\n");
         }
     }
