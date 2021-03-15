@@ -2,7 +2,6 @@ package com.andreubita.poo.ficha3;
 
 import java.time.Duration;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -35,7 +34,7 @@ public class Video {
         this.video = video;
         this.postedOn = LocalDate.now();
         this.resolution = resolution;
-        this.duration = duration;
+        this.duration = duration.clone();
         setComments(new String[0]);
         this.likes = likes;
         this.dislikes = dislikes;
@@ -46,7 +45,7 @@ public class Video {
         this.video = video1.getVideo();
         this.postedOn = video1.getPostedOn();
         this.resolution = video1.getResolution();
-        this.duration = video1.getDuration();
+        this.duration = video1.getDuration().clone();
         setComments(video1.getComments());
         this.likes = video1.getLikes();
         this.dislikes = video1.getDislikes();
@@ -98,11 +97,11 @@ public class Video {
     }
 
     public Tuple<Integer, Integer> getDuration() {
-        return duration;
+        return this.duration.clone();
     }
 
     public void setDuration(Tuple<Integer, Integer> duration) {
-        this.duration = duration;
+        this.duration = duration.clone();
     }
 
     public String[] getComments() {
@@ -131,7 +130,6 @@ public class Video {
 
     @Override
     public boolean equals(Object o) {
-        ArrayList<Integer> test = new ArrayList<>(40);
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Video video1 = (Video) o;
@@ -141,7 +139,7 @@ public class Video {
                 this.name.equals(video1.getName()) &&
                 Arrays.equals(video, video1.video) &&
                 Objects.equals(postedOn, video1.postedOn) &&
-                Objects.equals(duration, video1.duration) &&
+                duration.equals(video1.getDuration()) &&
                 Arrays.equals(comments, video1.comments);
     }
 
@@ -153,7 +151,7 @@ public class Video {
                 ", video=" + Arrays.toString(video) +
                 ", postedOn=" + postedOn +
                 ", resolution=" + resolution +
-                ", duration=" + duration +
+                ", duration=" + duration.clone() +
                 ", comments=" + Arrays.toString(comments) +
                 ", likes=" + likes +
                 ", dislikes=" + dislikes +

@@ -17,7 +17,7 @@ public class Lamp {
     }
 
     public Lamp(ArrayList<Tuple<Instant, State>> switches){
-        this.switches = switches;
+        setSwitches(switches);
     }
 
     public Lamp(Lamp newLamp){
@@ -41,6 +41,10 @@ public class Lamp {
             return "State{" +
                     "rate=" + rate +
                     '}';
+        }
+
+        public double getRate() {
+            return rate;
         }
     }
 
@@ -85,9 +89,9 @@ public class Lamp {
     }
 
     private double calculateExpense(Tuple<Instant,State> fst, Tuple<Instant,State> snd){
-        Duration dur = Duration.between(fst.x, snd.x);
-        if(fst.y.rate == -1) return 0;
-        return dur.toMillis() * fst.y.rate;
+        Duration dur = Duration.between(fst.getX(), snd.getX());
+        if(fst.getY().getRate() == -1) return 0;
+        return dur.toMillis() * fst.getY().getRate();
     }
 
     @Override
@@ -102,10 +106,16 @@ public class Lamp {
     }
 
     public ArrayList<Tuple<Instant, State>> getSwitches() {
-        return this.switches;
+        ArrayList<Tuple<Instant,State>> newArr = new ArrayList<>();
+        for (Tuple<Instant, State> aSwitch : this.switches)
+            newArr.add(aSwitch.clone());
+        return newArr;
     }
 
-    public void setSwitches(ArrayList<Tuple<Instant, State>> switches) {
-        this.switches = switches;
+    public void setSwitches(ArrayList<Tuple<Instant, State>> newSwitches) {
+        ArrayList<Tuple<Instant,State>> newArr = new ArrayList<>();
+        for (Tuple<Instant, State> aSwitch : newSwitches)
+            newArr.add(aSwitch.clone());
+        this.switches = newArr;
     }
 }
