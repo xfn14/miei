@@ -1,5 +1,7 @@
 package com.andreubita.poo.ficha2;
 
+import java.util.Arrays;
+
 public class Ex06 {
     public static void main(String[] args) {
         int[][] matrix = new int[10][10];
@@ -69,5 +71,33 @@ public class Ex06 {
             for (int j = 0; j < col; j++)
                 newMatrix[i][j] = -matrix[i][j];
         return newMatrix;
+    }
+
+    /**
+     * Prints a matrix to the terminal
+     *
+     * @param matrix matrix to print
+     * @param lin number of lines
+     * @param col number of columns
+     */
+    public void printMatrix(int[][] matrix, int lin, int col){
+        for (int i = 0; i < lin; i++){
+            System.out.print("[");
+            for (int j = 0; j < col; j++)
+                System.out.print(getElem(matrix, i, j) + (j == col-1 ? "" : ","));
+            System.out.print("]\n");
+        }
+    }
+
+    /**
+     * Prints a matrix to the terminal
+     * (Alternative)
+     *
+     * @param matrix matrix to print
+     * @param lin number of lines
+     */
+    public void printMatrix(int[][] matrix, int lin){
+        for (int i = 0; i < lin; i++)
+            System.out.println(Arrays.toString(matrix[i]));
     }
 }
