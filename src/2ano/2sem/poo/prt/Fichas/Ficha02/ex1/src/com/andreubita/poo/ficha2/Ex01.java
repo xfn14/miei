@@ -24,10 +24,12 @@ public class Ex01 {
         int sizeRes = 0;
         for(int i = 0; i < Math.min(size1, size2); i++){
             if(size1 < size2){
-                if(contains(arr2, size2, arr1[i]))
+                if(contains(arr2, size2, arr1[i]) &&
+                !contains(res, sizeRes, arr1[i]))
                     res[sizeRes++] = arr1[i];
             }else{
-                if(contains(arr1, size1, arr2[i]))
+                if(contains(arr1, size1, arr2[i]) &&
+                !contains(res, sizeRes, arr2[i]))
                     res[sizeRes++] = arr2[i];
             }
         }
