@@ -15,6 +15,7 @@ public class Ex05 {
      * @param str String to search
      * @return if array contains str or not
      */
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     public boolean contains(String[] arr, int size, String str){
         for (int i = 0; i < size; i++)
             if(arr[i].equals(str)) return true;

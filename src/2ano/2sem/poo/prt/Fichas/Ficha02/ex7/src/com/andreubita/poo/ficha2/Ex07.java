@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Ex07 {
+    // TODO: 3/17/2021 fix numbers matching numbers and stars matching stars
     public static void main(String[] args) {
         Ex07 ex07 = new Ex07();
         Scanner scanner = new Scanner(System.in);
@@ -50,10 +51,9 @@ public class Ex07 {
         if(matchKey.size() == 7){
             int offset = 0;
             for (int i = 0; i < 50; i++) {
-                StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("  ".repeat(Math.max(0, offset)));
-                stringBuilder.append(matchKey.toString());
-                System.out.print(stringBuilder.toString() + "\n");
+                String res = "  ".repeat(Math.max(0, offset)) +
+                        matchKey.toString();
+                System.out.print(res + "\n");
                 offset++;
             }
         }else{

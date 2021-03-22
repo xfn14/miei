@@ -12,16 +12,17 @@ public class Ex03 {
     public static void main(String[] args) {
         Ex03 ex03 = new Ex03();
         LocalDate date = LocalDate.now();
-        ex03.insereData(date);
+        ex03.insertDate(date);
         System.out.print(ex03.toString());
     }
 
-    public void insereData(LocalDate data){
-        this.datasArr = Arrays.copyOf(this.datasArr, this.datasArr.length + 1);
-        this.datasArr[datasArr.length-1] = data;
+    public void insertDate(LocalDate data){
+        LocalDate[] newArr = Arrays.copyOf(this.datasArr, this.datasArr.length + 1);
+        newArr[newArr.length-1] = data;
+        this.datasArr = newArr;
     }
 
-    public LocalDate dataMaisProxima(LocalDate data){
+    public LocalDate nearestDate(LocalDate data){
         LocalDate closest = null;
         Duration duration = null;
         for (LocalDate localDate : this.datasArr) {
