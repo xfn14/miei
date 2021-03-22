@@ -48,7 +48,7 @@ public class Triangle {
     }
 
     /**
-     * Calculate area using Hero's Formula
+     * Calculate area using Heron's Formula
      *
      * @return area of the triangle
      */
@@ -75,7 +75,7 @@ public class Triangle {
     /**
      * Calculate the height of a triangle
      *
-     * @return
+     * @return height of the triangle
      */
     public double getHeight(){
         return Math.abs(getMaxY().getY()) + Math.abs(getMinY().getY());
