@@ -1,20 +1,17 @@
-package com.andreubita.poo.ficha3;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Order {
-    private String name;
-    private int nif;
-    private String address;
-    private int orderId;
-    private LocalDateTime orderTime;
+    private String name; // nome
+    private int nif; // numero de identificaçao fiscal
+    private String address; // morada
+    private int orderId; // numero de encomenda
+    private LocalDateTime orderTime; // data da encomenda
+    private List<OrderLine> orderLineList; // lista de linhas de encomendas
 
-    // Dependency over Ex7
-    private List<OrderLine> orderLineList;
-
+    // Construtor vazio
     public Order(){
         this.name = "André";
         this.nif = 777;
@@ -24,6 +21,7 @@ public class Order {
         this.orderLineList = new ArrayList<>(10);
     }
 
+    // Construtor parametrizado
     public Order(String name, int nif, String address, int orderId,
                  LocalDateTime orderTime, List<OrderLine> orderLineList) {
         this.name = name;
@@ -34,6 +32,7 @@ public class Order {
         setOrderLineList(orderLineList);
     }
 
+    // Construtor de clone
     public Order(Order order){
         setName(order.getName());
         setNif(order.getNif());
@@ -43,40 +42,93 @@ public class Order {
         setOrderLineList(order.getOrderLineList());
     }
 
+    /**
+     * Metodo que calcula o valor total
+     * da encomenda.
+     *
+     * @return valor total da encomenda
+     */
     public double calcTotalValue(){
-        return getOrderLineList().stream().mapToDouble(OrderLine::calcValueInLine).sum();
+        return getOrderLineList().stream().mapToDouble(OrderLine::calculaValorLinhaEnc).sum();
 //        int total = 0;
 //        for(OrderLine orderLine : getOrderLineList())
 //            total += orderLine.calcValueInLine();
 //        return total;
     }
 
+    /**
+     * Calcula o valor total dos descontos
+     * obtidos nos diferentes produtos
+     * encomendados.
+     *
+     * @return valor total dos descontos obtidos
+     */
     public double calcTotalRebate(){
-        return getOrderLineList().stream().mapToDouble(OrderLine::getRebateValue).sum();
+        return getOrderLineList().stream().mapToDouble(OrderLine::calculaValorDesconto).sum();
     }
 
+    /**
+     * Metodo que determina o numero total
+     * de produtos a receber
+     *
+     * @return quantidade total de produtos
+     */
     public double calcTotalQnt(){
         return getOrderLineList().stream().mapToDouble(OrderLine::getQnt).sum();
     }
 
+    /**
+     * Metodo que determina se um produto
+     * vai ser encomendado.
+     *
+     * @param ref referencia do produto
+     * @return existencia de um produto
+     */
     public boolean containsProduct(String ref){
         for(OrderLine orderLine : getOrderLineList())
             if(orderLine.getRef().equals(ref)) return true;
         return false;
     }
 
+    /**
+     * Metodo que adiciona uma nova linha
+     * de encomenda.
+     *
+     * @param orderLine linha de encomenda a adicionar
+     */
     public void addOrderLine(OrderLine orderLine){
         List<OrderLine> orderLines = new ArrayList<>(getOrderLineList());
         orderLines.add(orderLine.clone());
         this.orderLineList = orderLines;
     }
 
+    /**
+     * Metodo que remove uma linha de
+     * encomenda.
+     *
+     * @param orderLine linha de encomenda a remover
+     */
     public void remOrderLine(OrderLine orderLine){
         List<OrderLine> orderLines = new ArrayList<>(getOrderLineList());
         orderLines.remove(orderLine);
         this.orderLineList = orderLines;
     }
 
+    /**
+     * Metodo que remove uma linha de
+     * encomenda, atraves da sua referencia
+     *
+     * @param ref referencia da linha de encomenda a remover
+     */
+    public void remRefProd(String ref){
+        for(OrderLine orderLine : getOrderLineList())
+            if(orderLine.getRef().equals(ref)){
+                remOrderLine(orderLine);
+                break;
+            }
+    }
+
+    // Getters e Setters
     public String getName() {
         return name;
     }
@@ -130,6 +182,7 @@ public class Order {
             newArr.add(crt.clone());
         this.orderLineList = newArr;
     }
+    ///////////////////////////////////////////////
 
     @Override
     public Order clone(){
