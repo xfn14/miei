@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>TesteEncomenda</OriginalElement>
+  <nodes>
+    <node x="0.0" y="551.0">EncomendaEficiente</node>
+    <node x="207.39999999999998" y="0.0">LinhaEncomenda</node>
+    <node x="310.825" y="1190.0">TesteEncomenda</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="TesteEncomenda" target="EncomendaEficiente">
+      <point x="-75.75" y="-30.0" />
+      <point x="336.075" y="1170.0" />
+      <point x="123.0" y="1170.0" />
+      <point x="-123.0" y="294.5" />
+    </edge>
+    <edge source="TesteEncomenda" target="LinhaEncomenda">
+      <point x="75.75" y="-30.0" />
+      <point x="487.575" y="1170.0" />
+      <point x="513.5" y="1170.0" />
+      <point x="513.5" y="526.0" />
+      <point x="530.275" y="526.0" />
+      <point x="138.375" y="250.5" />
+    </edge>
+    <edge source="EncomendaEficiente" target="LinhaEncomenda">
+      <point x="-123.0" y="-294.5" />
+      <point x="123.0" y="526.0" />
+      <point x="253.52499999999998" y="526.0" />
+      <point x="-138.375" y="250.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5" x="165.0" y="663.0" />
+  <SelectedNodes>
+    <node>LinhaEncomenda</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

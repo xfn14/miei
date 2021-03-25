@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="tabuleiro_8h" kind="file" language="C++">
+    <compoundname>tabuleiro.h</compoundname>
+    <includes refid="data_8h" local="yes">data.h</includes>
+    <includedby refid="pos_8h" local="yes">pos.h</includedby>
+    <includedby refid="jogada_8h" local="yes">jogada.h</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <includedby refid="tabuleiro_8c" local="yes">tabuleiro.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>data.h</label>
+        <link refid="data_8h"/>
+      </node>
+      <node id="1">
+        <label>tabuleiro.h</label>
+        <link refid="tabuleiro_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>file.c</label>
+        <link refid="file_8c_source"/>
+      </node>
+      <node id="5">
+        <label>file.h</label>
+        <link refid="file_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>tabuleiro.c</label>
+        <link refid="tabuleiro_8c_source"/>
+      </node>
+      <node id="1">
+        <label>tabuleiro.h</label>
+        <link refid="tabuleiro_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>pos.c</label>
+        <link refid="pos_8c_source"/>
+      </node>
+      <node id="2">
+        <label>pos.h</label>
+        <link refid="pos_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>main.c</label>
+        <link refid="main_8c_source"/>
+      </node>
+      <node id="9">
+        <label>lista.c</label>
+        <link refid="lista_8c_source"/>
+      </node>
+      <node id="7">
+        <label>jogada.c</label>
+        <link refid="jogada_8c_source"/>
+      </node>
+      <node id="8">
+        <label>lista.h</label>
+        <link refid="lista_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>jogada.h</label>
+        <link refid="jogada_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>interpretador.c</label>
+        <link refid="interpretador_8c_source"/>
+      </node>
+      <node id="3">
+        <label>interpretador.h</label>
+        <link refid="interpretador_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="tabuleiro_8h_1a7da4591f49e575d89b802ef9a29c06df" prot="public" static="no" mutable="no">
+        <type>const <ref refid="data_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref></type>
+        <definition>const CASA tabuleiro_inicial[8][8]</definition>
+        <argsstring>[8][8]</argsstring>
+        <name>tabuleiro_inicial</name>
+        <briefdescription>
+<para>tabuleiro inicial </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tabuleiro.h" line="12" column="12" bodyfile="tabuleiro.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tabuleiro_8h_1aa0b6c1689e60ac852a73d67e066c1df5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mostrar_tabuleiro</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>mostrar_tabuleiro</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Função que recebe um estado e imprime o tabuleiro para esse estado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Estado atual </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tabuleiro.h" line="18" column="6" bodyfile="tabuleiro.c" bodystart="4" bodyend="22" declfile="tabuleiro.h" declline="18" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definição do tabuleiro e das suas funções </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#ifndef<sp/>SRC_TABULEIRO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRC_TABULEIRO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="data_8h" kindref="compound">data.h</ref>&quot;</highlight></codeline>
+<codeline lineno="12" refid="tabuleiro_8h_1a7da4591f49e575d89b802ef9a29c06df" refkind="member"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="data_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/><ref refid="tabuleiro_8h_1a7da4591f49e575d89b802ef9a29c06df" kindref="member">tabuleiro_inicial</ref>[8][8];</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tabuleiro_8h_1aa0b6c1689e60ac852a73d67e066c1df5" kindref="member">mostrar_tabuleiro</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//SRC_TABULEIRO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tabuleiro.h"/>
+  </compounddef>
+</doxygen>
