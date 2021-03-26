@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="structCOORDENADA" kind="struct"><name>COORDENADA</name>
+    <member refid="structCOORDENADA_1adfbc8d4856ce807139fdf62e00aed29a" kind="variable"><name>coluna</name></member>
+    <member refid="structCOORDENADA_1aefe14bcc5a066ac3b21500cc3d28c06f" kind="variable"><name>linha</name></member>
+  </compound>
+  <compound refid="structESTADO" kind="struct"><name>ESTADO</name>
+    <member refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kind="variable"><name>tab</name></member>
+    <member refid="structESTADO_1a4896a5c5c1f40b43fb795623327e3f47" kind="variable"><name>ultima_jogada</name></member>
+    <member refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kind="variable"><name>jogadas</name></member>
+    <member refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kind="variable"><name>num_jogadas</name></member>
+    <member refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kind="variable"><name>jogador_atual</name></member>
+  </compound>
+  <compound refid="structJOGADA" kind="struct"><name>JOGADA</name>
+    <member refid="structJOGADA_1a93d9306cb0c49b66b7d9a615bffe0149" kind="variable"><name>jogador1</name></member>
+    <member refid="structJOGADA_1ab46b16dfbdc7f2af9430c8dcdac0914b" kind="variable"><name>jogador2</name></member>
+  </compound>
+  <compound refid="structnodo" kind="struct"><name>nodo</name>
+    <member refid="structnodo_1ab63adcdb83ea1fdcf4fa10f3cafc4a6a" kind="variable"><name>valor</name></member>
+    <member refid="structnodo_1aaaabdcb6641ddcdac8990402242b154a" kind="variable"><name>proximo</name></member>
+  </compound>
+  <compound refid="CMakeCache_8txt" kind="file"><name>CMakeCache.txt</name>
+    <member refid="CMakeCache_8txt_1a5a46e68107b399f5e2449dcb5f1d8414" kind="variable"><name>__pad0__</name></member>
+    <member refid="CMakeCache_8txt_1aba69e7d86e970c5454fedf7e25cbf49e" kind="variable"><name>__STDC_VERSION__</name></member>
+    <member refid="CMakeCache_8txt_1a391447bc12001cf307b9fec77d32c722" kind="variable"><name>__STDC_UTF_16__</name></member>
+    <member refid="CMakeCache_8txt_1aebc193933efcf54801ba103bf6d12dbb" kind="variable"><name>__STDC_UTF_32__</name></member>
+    <member refid="CMakeCache_8txt_1aacc78bc040f85bfc5d36eda8c048a1fe" kind="variable"><name>__STDC_HOSTED__</name></member>
+    <member refid="CMakeCache_8txt_1a4f955bfc59f2aa5f37123f7fa8c45974" kind="variable"><name>__GNUC__</name></member>
+    <member refid="CMakeCache_8txt_1aefc5089d158028a655f8653d849ea643" kind="variable"><name>__GNUC_MINOR__</name></member>
+    <member refid="CMakeCache_8txt_1a68c7f08caefc9a019e0b82ec6b3fa343" kind="variable"><name>__GNUC_PATCHLEVEL__</name></member>
+    <member refid="CMakeCache_8txt_1abb4404c3387f41ca320babfbcff1102f" kind="variable"><name>__VERSION__</name></member>
+    <member refid="CMakeCache_8txt_1acf476ec759fbe7a6aa89427ea8965872" kind="variable"><name>__ATOMIC_RELAXED</name></member>
+    <member refid="CMakeCache_8txt_1a44cd817264eb1136dae5f3b248f8fa8e" kind="variable"><name>__ATOMIC_SEQ_CST</name></member>
+    <member refid="CMakeCache_8txt_1a77baa125558a766167c49286c9873d7f" kind="variable"><name>__ATOMIC_ACQUIRE</name></member>
+    <member refid="CMakeCache_8txt_1a5738074ef1a9257e5bcb0b527c2c93a3" kind="variable"><name>__ATOMIC_RELEASE</name></member>
+    <member refid="CMakeCache_8txt_1a93654874cdfb30676f9c0c31eb3511c0" kind="variable"><name>__ATOMIC_ACQ_REL</name></member>
+    <member refid="CMakeCache_8txt_1a000e85470c6f5d9f1aa22fa4df83f0b9" kind="variable"><name>__ATOMIC_CONSUME</name></member>
+    <member refid="CMakeCache_8txt_1a1511d292a5f78fc21a6158b593ac851f" kind="variable"><name>__pic__</name></member>
+    <member refid="CMakeCache_8txt_1a9d2faa5c809ed8528370ec492faaccef" kind="variable"><name>__PIC__</name></member>
+    <member refid="CMakeCache_8txt_1a86a17f51e74711e6e0922cade6331e71" kind="variable"><name>__pie__</name></member>
+    <member refid="CMakeCache_8txt_1a536e32b75159affbe2197b81a061284b" kind="variable"><name>__PIE__</name></member>
+    <member refid="CMakeCache_8txt_1a8af0fd31855c1121674e7d0adf6acbee" kind="variable"><name>__FINITE_MATH_ONLY__</name></member>
+    <member refid="CMakeCache_8txt_1aae88ee59a31703e88a326390e91a32fd" kind="variable"><name>_LP64</name></member>
+    <member refid="CMakeCache_8txt_1a2dcb516e6c55b8bdfd122dc65ada57b5" kind="variable"><name>__LP64__</name></member>
+    <member refid="CMakeCache_8txt_1a52701f18fd19d3d5e1f83ec11c05d570" kind="variable"><name>__SIZEOF_INT__</name></member>
+    <member refid="CMakeCache_8txt_1a25b323872510a2d005ee2f45f5efd38b" kind="variable"><name>__SIZEOF_LONG__</name></member>
+    <member refid="CMakeCache_8txt_1a87bd59f7da0f977c3d450e95b4f00532" kind="variable"><name>__SIZEOF_LONG_LONG__</name></member>
+    <member refid="CMakeCache_8txt_1a13a1a9ce0eb7429c078ea705b54ac44d" kind="variable"><name>__SIZEOF_SHORT__</name></member>
+    <member refid="CMakeCache_8txt_1a99451faa2465beb743c5cadc6a20f102" kind="variable"><name>__SIZEOF_FLOAT__</name></member>
+    <member refid="CMakeCache_8txt_1acb4d0f0ad8b370190fb78d60045cbe85" kind="variable"><name>__SIZEOF_DOUBLE__</name></member>
+    <member refid="CMakeCache_8txt_1a398170fb1a6ec5ddef97aada19630f92" kind="variable"><name>__SIZEOF_LONG_DOUBLE__</name></member>
+    <member refid="CMakeCache_8txt_1a8a0ccc607658039e8f34c766290b880a" kind="variable"><name>__SIZEOF_SIZE_T__</name></member>
+    <member refid="CMakeCache_8txt_1af18faf2347e6868d6c9ed02b46326720" kind="variable"><name>__CHAR_BIT__</name></member>
+    <member refid="CMakeCache_8txt_1ade3bae6ac3c6cb0079bc5a1a61316c5a" kind="variable"><name>__BIGGEST_ALIGNMENT__</name></member>
+    <member refid="CMakeCache_8txt_1a668b60d2f5086a7b075f8d739e3a02d5" kind="variable"><name>__ORDER_LITTLE_ENDIAN__</name></member>
+    <member refid="CMakeCache_8txt_1aadebb1c0721f9b0a30fe99e903ab7379" kind="variable"><name>__ORDER_BIG_ENDIAN__</name></member>
+    <member refid="CMakeCache_8txt_1a1d768fc4923117ddc111812917d014f1" kind="variable"><name>__ORDER_PDP_ENDIAN__</name></member>
+    <member refid="CMakeCache_8txt_1a06b21194cf5550fb37cc1282001bdc0e" kind="variable"><name>__BYTE_ORDER__</name></member>
+    <member refid="CMakeCache_8txt_1af83df19811ef575ae2b34e8c904a0408" kind="variable"><name>__FLOAT_WORD_ORDER__</name></member>
+    <member refid="CMakeCache_8txt_1a1ee656ff8807634813d40465fb2bcdc1" kind="variable"><name>__SIZEOF_POINTER__</name></member>
+    <member refid="CMakeCache_8txt_1afad16a5dece04ae3a5d68fc746889cdd" kind="variable"><name>__SIZE_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a79a3d8790b2588b09777910863574e09" kind="variable"><name>int</name></member>
+    <member refid="CMakeCache_8txt_1a2e569667c74a773d6110a55fb19fe7d7" kind="variable"><name>__PTRDIFF_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a20f76e5c58ddc0926b85e9093730c9ae" kind="variable"><name>__WCHAR_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1ab9eb6de4ef3e35d820fa14bf279673c6" kind="variable"><name>__WINT_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1add72759aac6536e641bc2e8c12366d4b" kind="variable"><name>__INTMAX_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1ae27a42a4b7ff92c051bf4badd2702611" kind="variable"><name>__UINTMAX_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a7e380349dd3aa6cea0d744c2e90e4721" kind="variable"><name>__CHAR16_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1af91b17fdb800ffc733b2eddf51172eac" kind="variable"><name>__CHAR32_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a2c74d832cde290cb39ee58eda6214a78" kind="variable"><name>__SIG_ATOMIC_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a7068c995e5075e4589201a350d1cefca" kind="variable"><name>__INT8_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kind="variable"><name>char</name></member>
+    <member refid="CMakeCache_8txt_1aecf40d0b02f3ea9194acecf92ef8ad0b" kind="variable"><name>__INT16_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1aff307c0fcea6eefb5eead1fd6d9b8153" kind="variable"><name>__INT32_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1aa68c5513d779cc8e92de1fb1e99a1451" kind="variable"><name>__INT64_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1acdac745c75cc6d9467f0e8f428cb7c38" kind="variable"><name>__UINT8_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a7c334ef15565439f16847268e5aecc00" kind="variable"><name>__UINT16_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1ae5f84304c1e72cdd73b6da53c4d47f25" kind="variable"><name>__UINT32_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1ae5334e804b67b171a886cb9c2a6241f0" kind="variable"><name>__UINT64_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a0f059754211c536004913c4594b226b7" kind="variable"><name>__INT_LEAST8_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a6841cc391d897d17cd36b6389eedf1a9" kind="variable"><name>__INT_LEAST16_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a2bf5f979cc9392d0cf97a14d736d628a" kind="variable"><name>__INT_LEAST32_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1acaedfaa861fcf2ab2ed6fef67d552001" kind="variable"><name>__INT_LEAST64_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a2a5868ec6fe252f426662079d5187d04" kind="variable"><name>__UINT_LEAST8_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a0cf7166f2026cc52431a063b5f16caa7" kind="variable"><name>__UINT_LEAST16_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a2b66f33976e9bc55e27367e3b1448e40" kind="variable"><name>__UINT_LEAST32_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1afb89ddd568254fb1f9e5eeb6fdb13d0b" kind="variable"><name>__UINT_LEAST64_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a200c99a73bb9894a85b11b122e3e26d0" kind="variable"><name>__INT_FAST8_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a0c08f8106efbb6105db009f25e8d8664" kind="variable"><name>__INT_FAST16_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1ae5117fe8af2968c8df646c90f5eb24d4" kind="variable"><name>__INT_FAST32_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a7ed6af681304005196de13467b9442d5" kind="variable"><name>__INT_FAST64_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a41340f1e822a8ea4d6994bba627339fd" kind="variable"><name>__UINT_FAST8_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a2231ce950df5d5eaf1dc88cb718b4569" kind="variable"><name>__UINT_FAST16_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1ad5e5c8a8bb834a4f9d47edfe6ec88204" kind="variable"><name>__UINT_FAST32_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1aa588b63d52e2735c82b0262ae2034b2e" kind="variable"><name>__UINT_FAST64_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1ac93efd8e9d485881d53ab451f844c8ec" kind="variable"><name>__INTPTR_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1a835a336a71d176cb81526e3e2acf8343" kind="variable"><name>__UINTPTR_TYPE__</name></member>
+    <member refid="CMakeCache_8txt_1af2a3b27e09cc851abc4ef3e7daea66c2" kind="variable"><name>__GXX_ABI_VERSION</name></member>
+    <member refid="CMakeCache_8txt_1ad1e3a625f5463100aab8db5fedf63d52" kind="variable"><name>__SCHAR_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1aaa2dae7d1963575bc4e3e95e3fee9ed4" kind="variable"><name>__SHRT_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1a9fce70495bb7d54b8b4adc9f7f63ea8e" kind="variable"><name>__INT_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1a9efbe01f7e7b66cbdac106fb51e2f65f" kind="variable"><name>__LONG_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1ade7a297151900f13d47b71e6a9dda0a1" kind="variable"><name>__LONG_LONG_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1ab06c84ef26aaf126084f60730505b6b4" kind="variable"><name>__WCHAR_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1ab2394184364567c4286a32eec574295e" kind="variable"><name>__WCHAR_MIN__</name></member>
+    <member refid="CMakeCache_8txt_1ade9fb9056c1b3e7f9417478f12ac5452" kind="variable"><name>__WINT_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1a0101eb15159977cbfe763d0d71a7023f" kind="variable"><name>__WINT_MIN__</name></member>
+    <member refid="CMakeCache_8txt_1a047880d1824d5ce75ac17952c273fcc5" kind="variable"><name>__PTRDIFF_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1ad4abf877d7a79e3d1d13494ce6d64d73" kind="variable"><name>__SIZE_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1a2c18bf51ac4987d34556c1d5204fafc3" kind="variable"><name>__SCHAR_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1abdc98d940bf09b4a0e8117a07ab53600" kind="variable"><name>__SHRT_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1a4425e966afffdbd4811d4982b7a34c37" kind="variable"><name>__INT_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1ae5a5a8c99b3b2c3c9ab5d97d46cfb088" kind="variable"><name>__LONG_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1a930c46d4be0a88c898010804768abf19" kind="variable"><name>__LONG_LONG_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1a3691baefe5665cd4bb5f811dfd191c64" kind="variable"><name>__WCHAR_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1afd7b42a6ec49614fdb2965edfcc52547" kind="variable"><name>__WINT_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1ae5564189ac0fc1c50dbf6a91ff5c9ba1" kind="variable"><name>__PTRDIFF_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1a682b2c79725efd70c65549fac4060ae4" kind="variable"><name>__SIZE_WIDTH__</name></member>
+    <member refid="CMakeCache_8txt_1a6b068320140ebfbbeaa001c18465ea9e" kind="variable"><name>__INTMAX_MAX__</name></member>
+    <member refid="CMakeCache_8txt_1ad56d00d3d7b282aa4096d39b0f15746c" kind="variable"><name>CMAKE_EXTRA_GENERATOR_C_SYSTEM_INCLUDE_DIRS</name></member>
+    <member refid="CMakeCache_8txt_1a986ccfc90e04633694fe6cff5472be19" kind="variable"><name>include</name></member>
+    <member refid="CMakeCache_8txt_1acb61b5fec09bcc7d3b88bf1109612ea6" kind="variable"><name>gnu</name></member>
+    <member refid="CMakeCache_8txt_1a15033d43fd4881ecb41d0a9ef3f98c8b" kind="function"><name>__has_include</name></member>
+    <member refid="CMakeCache_8txt_1a97e2b5b7d48e0c704f01b437bbb41bc3" kind="function"><name>__has_include__</name></member>
+    <member refid="CMakeCache_8txt_1a6bc72b80bcdbfe30be5d38536affde6f" kind="function"><name>__has_include_next</name></member>
+    <member refid="CMakeCache_8txt_1ac96b06945e62d6ea6764b6d86745ec26" kind="function"><name>__has_include_next__</name></member>
+    <member refid="CMakeCache_8txt_1a2f10a19f2682f0eb61615edae3fa69ef" kind="function"><name>__INTMAX_C</name></member>
+  </compound>
+  <compound refid="CMakeCCompilerId_8c" kind="file"><name>CMakeCCompilerId.c</name>
+    <member refid="CMakeCCompilerId_8c_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="CMakeCCompilerId_8c_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="CMakeCCompilerId_8c_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="CMakeCCompilerId_8c_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="CMakeCCompilerId_8c_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="CMakeCCompilerId_8c_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="CMakeCCompilerId_8c_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="CMakeCCompilerId_8c_1a07f8e5783674099cd7f5110e22a78cdb" kind="define"><name>C_DIALECT</name></member>
+    <member refid="CMakeCCompilerId_8c_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="CMakeCCompilerId_8c_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="CMakeCCompilerId_8c_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="CMakeCCompilerId_8c_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
+    <member refid="CMakeCCompilerId_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="clion-environment_8txt" kind="file"><name>clion-environment.txt</name>
+  </compound>
+  <compound refid="clion-log_8txt" kind="file"><name>clion-log.txt</name>
+  </compound>
+  <compound refid="link_8txt" kind="file"><name>link.txt</name>
+  </compound>
+  <compound refid="TargetDirectories_8txt" kind="file"><name>TargetDirectories.txt</name>
+  </compound>
+  <compound refid="CMakeLists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="data_8c" kind="file"><name>data.c</name>
+    <member refid="data_8c_1a2daaed57ace3c257d7f948293783e9eb" kind="function"><name>obter_linha_coord</name></member>
+    <member refid="data_8c_1a3ed4d21a46780eeda0ed8f424bee08a1" kind="function"><name>obter_coluna_coord</name></member>
+    <member refid="data_8c_1adff04e626f2030df84816a16df461e21" kind="function"><name>obter_jogada_jogador</name></member>
+  </compound>
+  <compound refid="data_8h" kind="file"><name>data.h</name>
+    <member refid="data_8h_1aba91601f16d4c485b2d9b8c429f27039" kind="enum"><name>CASA</name></member>
+    <member refid="data_8h_1aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113" kind="enumvalue"><name>VAZIO</name></member>
+    <member refid="data_8h_1aba91601f16d4c485b2d9b8c429f27039ac8ab2059b949ffb7f8e756fe07b33d50" kind="enumvalue"><name>RASTRO</name></member>
+    <member refid="data_8h_1aba91601f16d4c485b2d9b8c429f27039a2a68287288d53d9e3d0129de720a5b8e" kind="enumvalue"><name>PECA</name></member>
+    <member refid="data_8h_1aba91601f16d4c485b2d9b8c429f27039adbf30221bdff40891fc1a1f6b5cf20e4" kind="enumvalue"><name>POS1</name></member>
+    <member refid="data_8h_1aba91601f16d4c485b2d9b8c429f27039a82361df9d511ef14b9e4b6f8312684dc" kind="enumvalue"><name>POS2</name></member>
+    <member refid="data_8h_1a94c221d29a1760f008b7834093259b7d" kind="typedef"><name>JOGADAS</name></member>
+    <member refid="data_8h_1a2daaed57ace3c257d7f948293783e9eb" kind="function"><name>obter_linha_coord</name></member>
+    <member refid="data_8h_1a3ed4d21a46780eeda0ed8f424bee08a1" kind="function"><name>obter_coluna_coord</name></member>
+    <member refid="data_8h_1adff04e626f2030df84816a16df461e21" kind="function"><name>obter_jogada_jogador</name></member>
+  </compound>
+  <compound refid="estado_8c" kind="file"><name>estado.c</name>
+    <member refid="estado_8c_1a7da4591f49e575d89b802ef9a29c06df" kind="variable"><name>tabuleiro_inicial</name></member>
+    <member refid="estado_8c_1a7e0c7e26fb685d9ab501e19b05e6954f" kind="function"><name>inicializar_estado</name></member>
+    <member refid="estado_8c_1ad6e326e4ffa57ca1ae0c75377ecefc8c" kind="function"><name>obter_jogador_atual</name></member>
+    <member refid="estado_8c_1a002d7b97f6e1f8bfa2b50efbe03d62bf" kind="function"><name>obter_ultima_jogada</name></member>
+    <member refid="estado_8c_1a6cd0b387bdee9e18003c78852394aa63" kind="function"><name>obter_numero_de_jogadas</name></member>
+    <member refid="estado_8c_1a6faa68373203923729ed38657aa0f768" kind="function"><name>obter_estado_casa</name></member>
+    <member refid="estado_8c_1ab3b8be2c1d31ca864df920d8f0df3a04" kind="function"><name>setTabuleiro</name></member>
+    <member refid="estado_8c_1aa21af881dfebf0f0e822b806edf9a006" kind="function"><name>obter_coordenada_peca</name></member>
+    <member refid="estado_8c_1a8c15dc48cadd06ac3887d88e47fd5ed1" kind="function"><name>resetJogadas</name></member>
+  </compound>
+  <compound refid="estado_8h" kind="file"><name>estado.h</name>
+    <member refid="estado_8h_1a7e0c7e26fb685d9ab501e19b05e6954f" kind="function"><name>inicializar_estado</name></member>
+    <member refid="estado_8h_1ad6e326e4ffa57ca1ae0c75377ecefc8c" kind="function"><name>obter_jogador_atual</name></member>
+    <member refid="estado_8h_1a6cd0b387bdee9e18003c78852394aa63" kind="function"><name>obter_numero_de_jogadas</name></member>
+    <member refid="estado_8h_1a6faa68373203923729ed38657aa0f768" kind="function"><name>obter_estado_casa</name></member>
+    <member refid="estado_8h_1ab3b8be2c1d31ca864df920d8f0df3a04" kind="function"><name>setTabuleiro</name></member>
+    <member refid="estado_8h_1aa21af881dfebf0f0e822b806edf9a006" kind="function"><name>obter_coordenada_peca</name></member>
+    <member refid="estado_8h_1a8c15dc48cadd06ac3887d88e47fd5ed1" kind="function"><name>resetJogadas</name></member>
+    <member refid="estado_8h_1a002d7b97f6e1f8bfa2b50efbe03d62bf" kind="function"><name>obter_ultima_jogada</name></member>
+  </compound>
+  <compound refid="file_8c" kind="file"><name>file.c</name>
+    <member refid="file_8c_1a88be94d179abd5073870fc1d206b3770" kind="function"><name>gr</name></member>
+    <member refid="file_8c_1ae6bfa898954094e9a4f4540e72ac3c81" kind="function"><name>ler</name></member>
+  </compound>
+  <compound refid="file_8h" kind="file"><name>file.h</name>
+    <member refid="file_8h_1a88be94d179abd5073870fc1d206b3770" kind="function"><name>gr</name></member>
+    <member refid="file_8h_1ae6bfa898954094e9a4f4540e72ac3c81" kind="function"><name>ler</name></member>
+  </compound>
+  <compound refid="interpretador_8c" kind="file"><name>interpretador.c</name>
+    <member refid="interpretador_8c_1a2896431d6a80cd39b3d24b40237612ee" kind="variable"><name>quit</name></member>
+    <member refid="interpretador_8c_1a87f17ec76699656b03c59b9240fa2759" kind="variable"><name>comandos</name></member>
+    <member refid="interpretador_8c_1a24da95ebeede4a540e37790ce8be359b" kind="function"><name>interpretador</name></member>
+  </compound>
+  <compound refid="interpretador_8h" kind="file"><name>interpretador.h</name>
+    <member refid="interpretador_8h_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
+    <member refid="interpretador_8h_1a2896431d6a80cd39b3d24b40237612ee" kind="variable"><name>quit</name></member>
+    <member refid="interpretador_8h_1a24da95ebeede4a540e37790ce8be359b" kind="function"><name>interpretador</name></member>
+  </compound>
+  <compound refid="jogada_8c" kind="file"><name>jogada.c</name>
+    <member refid="jogada_8c_1aedac94896fa0c978db67ffa48463b731" kind="function"><name>jogar</name></member>
+    <member refid="jogada_8c_1ad38b311e5dd671c323311b069aab168f" kind="function"><name>jogada_valida</name></member>
+    <member refid="jogada_8c_1a4067bb2bd3a973474435b8bebcf51775" kind="function"><name>adicionar_jogada</name></member>
+  </compound>
+  <compound refid="jogada_8h" kind="file"><name>jogada.h</name>
+    <member refid="jogada_8h_1aedac94896fa0c978db67ffa48463b731" kind="function"><name>jogar</name></member>
+    <member refid="jogada_8h_1ad38b311e5dd671c323311b069aab168f" kind="function"><name>jogada_valida</name></member>
+    <member refid="jogada_8h_1a4067bb2bd3a973474435b8bebcf51775" kind="function"><name>adicionar_jogada</name></member>
+  </compound>
+  <compound refid="lista_8c" kind="file"><name>lista.c</name>
+    <member refid="lista_8c_1ae3b99323b6f8f35d80bb69ff1a27985e" kind="function"><name>criar_lista</name></member>
+    <member refid="lista_8c_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kind="function"><name>insere_cabeca</name></member>
+    <member refid="lista_8c_1abfcb205f3eb670157be0d1221021714b" kind="function"><name>devolve_cabeca</name></member>
+    <member refid="lista_8c_1ad9380152361127432c55c1c6067e05ae" kind="function"><name>proximo</name></member>
+    <member refid="lista_8c_1a9026a681a68322b5ec7f07137b864cbd" kind="function"><name>remove_cabeca</name></member>
+    <member refid="lista_8c_1a4c10928f7acaa4e3de3760cea0dfd9c0" kind="function"><name>lista_esta_vazia</name></member>
+    <member refid="lista_8c_1aa350100b1458a5de32b6eb1f6e8ce91a" kind="function"><name>jog</name></member>
+    <member refid="lista_8c_1a7c2a15ce74c8c3436b02d7b9fc0b18c6" kind="function"><name>jog2</name></member>
+    <member refid="lista_8c_1a95f7d8d0e0842e0eaaab8550be91b16f" kind="function"><name>minimax</name></member>
+    <member refid="lista_8c_1a061abc2bb8a801636ce34c53ae41e3a4" kind="function"><name>jogadasProximas</name></member>
+    <member refid="lista_8c_1a532ad94e0682b31895602a4aa60ab5eb" kind="function"><name>distancia_eucladiana</name></member>
+  </compound>
+  <compound refid="lista_8h" kind="file"><name>lista.h</name>
+    <member refid="lista_8h_1ab352ead3fb06267f3afdd032d67c189c" kind="typedef"><name>NODO</name></member>
+    <member refid="lista_8h_1a2ed03b19209dd10718380b31b09a69f5" kind="typedef"><name>LISTA</name></member>
+    <member refid="lista_8h_1ae3b99323b6f8f35d80bb69ff1a27985e" kind="function"><name>criar_lista</name></member>
+    <member refid="lista_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kind="function"><name>insere_cabeca</name></member>
+    <member refid="lista_8h_1abfcb205f3eb670157be0d1221021714b" kind="function"><name>devolve_cabeca</name></member>
+    <member refid="lista_8h_1ad9380152361127432c55c1c6067e05ae" kind="function"><name>proximo</name></member>
+    <member refid="lista_8h_1a9026a681a68322b5ec7f07137b864cbd" kind="function"><name>remove_cabeca</name></member>
+    <member refid="lista_8h_1a4c10928f7acaa4e3de3760cea0dfd9c0" kind="function"><name>lista_esta_vazia</name></member>
+    <member refid="lista_8h_1aa350100b1458a5de32b6eb1f6e8ce91a" kind="function"><name>jog</name></member>
+    <member refid="lista_8h_1a061abc2bb8a801636ce34c53ae41e3a4" kind="function"><name>jogadasProximas</name></member>
+    <member refid="lista_8h_1a532ad94e0682b31895602a4aa60ab5eb" kind="function"><name>distancia_eucladiana</name></member>
+    <member refid="lista_8h_1a7c2a15ce74c8c3436b02d7b9fc0b18c6" kind="function"><name>jog2</name></member>
+    <member refid="lista_8h_1a95f7d8d0e0842e0eaaab8550be91b16f" kind="function"><name>minimax</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="movs_8c" kind="file"><name>movs.c</name>
+    <member refid="movs_8c_1a4e054f36607c534b3680ef11fa600868" kind="function"><name>movs</name></member>
+  </compound>
+  <compound refid="movs_8h" kind="file"><name>movs.h</name>
+    <member refid="movs_8h_1a4e054f36607c534b3680ef11fa600868" kind="function"><name>movs</name></member>
+  </compound>
+  <compound refid="pos_8c" kind="file"><name>pos.c</name>
+    <member refid="pos_8c_1a9270721c3d5737447c64729e868e7a1f" kind="function"><name>pos</name></member>
+  </compound>
+  <compound refid="pos_8h" kind="file"><name>pos.h</name>
+    <member refid="pos_8h_1a03b39d5580a9cf878ee44640ee530f2b" kind="function"><name>pos</name></member>
+  </compound>
+  <compound refid="tabuleiro_8c" kind="file"><name>tabuleiro.c</name>
+    <member refid="tabuleiro_8c_1aa0b6c1689e60ac852a73d67e066c1df5" kind="function"><name>mostrar_tabuleiro</name></member>
+  </compound>
+  <compound refid="tabuleiro_8h" kind="file"><name>tabuleiro.h</name>
+    <member refid="tabuleiro_8h_1a7da4591f49e575d89b802ef9a29c06df" kind="variable"><name>tabuleiro_inicial</name></member>
+    <member refid="tabuleiro_8h_1aa0b6c1689e60ac852a73d67e066c1df5" kind="function"><name>mostrar_tabuleiro</name></member>
+  </compound>
+  <compound refid="dir_e1ecdbac78f5041bd527fb40a7fd21eb" kind="dir"><name>cmake-build-debug/CMakeFiles/3.16.5</name>
+  </compound>
+  <compound refid="dir_95e29a8b8ee7c54052c171a88bb95675" kind="dir"><name>cmake-build-debug</name>
+  </compound>
+  <compound refid="dir_f89abcb304c928c7d889aa5625570de5" kind="dir"><name>cmake-build-debug/CMakeFiles</name>
+  </compound>
+  <compound refid="dir_2942f868a03c41b22a536fdc77b965b5" kind="dir"><name>cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC</name>
+  </compound>
+  <compound refid="dir_fdd899ddc42926d2a47f8247d252596f" kind="dir"><name>cmake-build-debug/CMakeFiles/src.dir</name>
+  </compound>
+</doxygenindex>

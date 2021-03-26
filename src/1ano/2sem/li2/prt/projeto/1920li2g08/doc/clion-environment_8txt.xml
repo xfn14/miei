@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="clion-environment_8txt" kind="file" language="C++">
+    <compoundname>clion-environment.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">ToolSet:<sp/>1.0<sp/>(local)Options:<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">Options:</highlight></codeline>
+    </programlisting>
+    <location file="cmake-build-debug/CMakeFiles/clion-environment.txt"/>
+  </compounddef>
+</doxygen>

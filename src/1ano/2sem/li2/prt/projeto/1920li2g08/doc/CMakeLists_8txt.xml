@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="CMakeLists_8txt" kind="file" language="C++">
+    <compoundname>CMakeLists.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">cmake_minimum_required(VERSION<sp/>3.15)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">project(src<sp/>C)</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">set(CMAKE_C_STANDARD<sp/>99)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">add_executable(src<sp/>main.c<sp/>jogada.c<sp/>jogada.h<sp/>tabuleiro.c<sp/>tabuleiro.h<sp/>data.h<sp/>estado.c<sp/>estado.h<sp/><ref refid="interpretador_8h_1a24da95ebeede4a540e37790ce8be359b" kindref="member">interpretador</ref>.c<sp/><ref refid="interpretador_8h_1a24da95ebeede4a540e37790ce8be359b" kindref="member">interpretador</ref>.h<sp/>file.c<sp/>file.h<sp/>lista.c<sp/>lista.h<sp/>movs.c<sp/>movs.h<sp/>pos.c<sp/>pos.h<sp/>data.c)</highlight></codeline>
+    </programlisting>
+    <location file="CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="movs_8c" kind="file" language="C++">
+    <compoundname>movs.c</compoundname>
+    <includes refid="movs_8h" local="yes">movs.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>movs.c</label>
+        <link refid="movs_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>movs.h</label>
+        <link refid="movs_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>data.h</label>
+        <link refid="data_8h"/>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="movs_8c_1a4e054f36607c534b3680ef11fa600868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void movs</definition>
+        <argsstring>(ESTADO *estado)</argsstring>
+        <name>movs</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>estado</declname>
+        </param>
+        <briefdescription>
+<para>Esta função através do estado indica quais foram as jogadas efetuadas pelos jogadores. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>estado</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O estado atual </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="movs.c" line="3" column="6" bodyfile="movs.c" bodystart="3" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;movs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>movs(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*estado){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>32;<sp/>i++){</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>jogador1<sp/>=<sp/><ref refid="data_8h_1adff04e626f2030df84816a16df461e21" kindref="member">obter_jogada_jogador</ref>(estado,<sp/>i,<sp/>1);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>jogador2<sp/>=<sp/><ref refid="data_8h_1adff04e626f2030df84816a16df461e21" kindref="member">obter_jogada_jogador</ref>(estado,<sp/>i,<sp/>2);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//printf(&quot;2:<sp/>%d<sp/>%d&quot;,<sp/>jogador2.coluna,<sp/>jogador2.linha);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador1_linha,<sp/>jogador2_linha;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>jogador1_coluna,<sp/>jogador2_coluna;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogador1_linha<sp/>=<sp/>8<sp/>-<sp/><ref refid="data_8h_1a2daaed57ace3c257d7f948293783e9eb" kindref="member">obter_linha_coord</ref>(jogador1);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogador2_linha<sp/>=<sp/>8<sp/>-<sp/><ref refid="data_8h_1a2daaed57ace3c257d7f948293783e9eb" kindref="member">obter_linha_coord</ref>(jogador2);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogador1_coluna<sp/>=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="data_8h_1a3ed4d21a46780eeda0ed8f424bee08a1" kindref="member">obter_coluna_coord</ref>(jogador1);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogador2_coluna<sp/>=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="data_8h_1a3ed4d21a46780eeda0ed8f424bee08a1" kindref="member">obter_coluna_coord</ref>(jogador2);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="data_8h_1a2daaed57ace3c257d7f948293783e9eb" kindref="member">obter_linha_coord</ref>(jogador2)<sp/>==<sp/>-1<sp/>&amp;&amp;<sp/><ref refid="data_8h_1a2daaed57ace3c257d7f948293783e9eb" kindref="member">obter_linha_coord</ref>(jogador1)<sp/>!=<sp/>-1){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;(%d)<sp/>%c%d\n&quot;</highlight><highlight class="normal">,<sp/>i+1,<sp/>jogador1_coluna,<sp/>jogador1_linha);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="data_8h_1a2daaed57ace3c257d7f948293783e9eb" kindref="member">obter_linha_coord</ref>(jogador1)<sp/>!=<sp/>-1<sp/>&amp;&amp;<sp/><ref refid="data_8h_1a2daaed57ace3c257d7f948293783e9eb" kindref="member">obter_linha_coord</ref>(jogador2)<sp/>!=<sp/>-1){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;(%d)<sp/>%c%d<sp/>%c%d\n&quot;</highlight><highlight class="normal">,<sp/>i+1,<sp/>jogador1_coluna,<sp/>jogador1_linha,<sp/>jogador2_coluna,<sp/>jogador2_linha);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="movs.c"/>
+  </compounddef>
+</doxygen>

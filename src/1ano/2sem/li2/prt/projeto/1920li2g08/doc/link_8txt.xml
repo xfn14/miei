@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="link_8txt" kind="file" language="C++">
+    <compoundname>link.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">/usr/bin/cc<sp/>-g<sp/><sp/><sp/>CMakeFiles/src.dir/main.c.o<sp/>CMakeFiles/src.dir/jogada.c.o<sp/>CMakeFiles/src.dir/tabuleiro.c.o<sp/>CMakeFiles/src.dir/estado.c.o<sp/>CMakeFiles/src.dir/<ref refid="interpretador_8h_1a24da95ebeede4a540e37790ce8be359b" kindref="member">interpretador</ref>.c.o<sp/>CMakeFiles/src.dir/file.c.o<sp/>CMakeFiles/src.dir/lista.c.o<sp/>CMakeFiles/src.dir/movs.c.o<sp/>CMakeFiles/src.dir/pos.c.o<sp/>CMakeFiles/src.dir/data.c.o<sp/><sp/>-o<sp/>src<sp/></highlight></codeline>
+    </programlisting>
+    <location file="cmake-build-debug/CMakeFiles/src.dir/link.txt"/>
+  </compounddef>
+</doxygen>
