@@ -53,7 +53,7 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 </td></tr> </table>
 
 <table>
-<tr><th>1ano1sem</th><th>1ano2sem</th></tr>
+<tr><th>2ano1sem</th><th>2ano2sem</th></tr>
 <tr><td>
 
 | **ALGC** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/algc/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/2ano/1sem/algc/prt) |

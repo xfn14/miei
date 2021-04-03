@@ -9,7 +9,7 @@ public class IntelliHouse {
     }
 
     public IntelliHouse(List<Lamp> lampList) {
-        this.lampList = lampList;
+        setLampList(lampList);
     }
 
     public IntelliHouse(IntelliHouse intelliHouse){
