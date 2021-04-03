@@ -35,4 +35,12 @@ public class Tuple<X, Y> {
         return getX().equals(tuple.getX()) &&
                 getY().equals(tuple.getY());
     }
+
+    @Override
+    public String toString() {
+        return "Tuple{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

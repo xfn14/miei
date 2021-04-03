@@ -1,5 +1,3 @@
-package com.andreubita.poo.ficha3;
-
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -142,4 +140,5 @@ public class Lamp {
     public Lamp clone() {
         return new Lamp(this);
     }
+
 }

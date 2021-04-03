@@ -1,17 +1,15 @@
-package com.andreubita.poo.ficha3;
-
-public class Point<X, Y> {
+public class Tuple<X, Y> {
     public final X x;
     public final Y y;
 
-    public Point(X x, Y y) {
+    public Tuple(X x, Y y) {
         this.x = x;
         this.y = y;
     }
 
-    public Point(Point<X, Y> point){
-        this.x = point.getX();
-        this.y = point.getY();
+    public Tuple(Tuple<X, Y> tuple){
+        this.x = tuple.getX();
+        this.y = tuple.getY();
     }
 
     public X getX() {
@@ -23,22 +21,22 @@ public class Point<X, Y> {
     }
 
     @Override
-    public Point<X,Y> clone(){
-        return new Point<>(this);
+    public Tuple<X,Y> clone(){
+        return new Tuple<>(this);
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Point<?, ?> point = (Point<?, ?>) o;
-        return getX().equals(point.getX()) &&
-                getY().equals(point.getY());
+        Tuple<?, ?> tuple = (Tuple<?, ?>) o;
+        return getX().equals(tuple.getX()) &&
+                getY().equals(tuple.getY());
     }
 
     @Override
     public String toString() {
-        return "Point{" +
+        return "Tuple{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';
