@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -44,6 +45,15 @@ public class Support {
         else this.queue.add(ticket.clone());
     }
 
+    public void resolveTicket(Ticket ticket, String handler, String info, LocalDateTime time){
+        int search = searchTicketIndex(ticket);
+        ticket.setHandler(handler);
+        ticket.setResponse(info);
+        ticket.setDoneTime(time);
+        if(search != -1) this.queue.set(search, ticket.clone());
+        else this.queue.add(ticket.clone());
+    }
+
     public List<Ticket> resolved(){
         List<Ticket> resolved = new ArrayList<>();
         for(Ticket crt : this.queue)
@@ -69,6 +79,60 @@ public class Support {
             if(!tops.containsKey(crt.getHandler())) tops.put(crt.getHandler(), 1);
             else tops.put(crt.getHandler(), tops.get(crt.getHandler()) + 1);
         return Collections.max(tops.entrySet(), Comparator.comparingInt(Map.Entry::getValue)).getKey();
+    }
+
+    public double doneTime(Ticket ticket){
+        if(ticket.getDoneTime() == null)
+            return -1;
+        return Duration.between(ticket.getStartTime(), ticket.getDoneTime()).toMinutes();
+    }
+
+    public double averageDoneTime(){
+        return averageDoneTime(LocalDateTime.MIN, LocalDateTime.MAX);
+    }
+
+    public double averageDoneTime(LocalDateTime start, LocalDateTime end){
+        double total = 0;
+        int n = 0;
+        for(Ticket crt : this.queue){
+            if(crt.getDoneTime() != null
+            && start.isBefore(crt.getDoneTime())
+            && end.isAfter(crt.getDoneTime())){
+                total += doneTime(crt.clone());
+                n++;
+            }
+        }
+        return total / n;
+    }
+
+    public Ticket longestDoneTime(){
+        return longestDoneTime(LocalDateTime.MIN, LocalDateTime.MAX);
+    }
+
+    public Ticket longestDoneTime(LocalDateTime start, LocalDateTime end){
+        if(this.queue.size() == 0) return null;
+        Ticket longest = null;
+        for (Ticket ticket : this.queue)
+            if (start.isBefore(ticket.getDoneTime())
+            && end.isAfter(ticket.getDoneTime())
+            && (longest == null || doneTime(ticket) > doneTime(longest)))
+                longest = ticket.clone();
+        return longest;
+    }
+
+    public Ticket shortestDoneTime(){
+        return shortestDoneTime(LocalDateTime.MIN, LocalDateTime.MAX);
+    }
+
+    public Ticket shortestDoneTime(LocalDateTime start, LocalDateTime end){
+        if(this.queue.size() == 0) return null;
+        Ticket longest = null;
+        for (Ticket ticket : this.queue)
+            if (start.isBefore(ticket.getDoneTime())
+            && end.isAfter(ticket.getDoneTime())
+            && (longest == null || doneTime(ticket) < doneTime(longest)))
+                longest = ticket.clone();
+        return longest;
     }
 
     public List<Ticket> getQueue() {
@@ -102,9 +166,10 @@ public class Support {
 
     @Override
     public String toString() {
-        return "Support{" +
-                "queue=" + queue +
-                '}';
+        final StringBuilder sb = new StringBuilder("Support{");
+        sb.append("queue=").append(queue);
+        sb.append('}');
+        return sb.toString();
     }
 
     @Override

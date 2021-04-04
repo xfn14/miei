@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Ticket {
     private String author;
@@ -170,15 +171,16 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "author='" + author + '\'' +
-                ", startTime=" + startTime +
-                ", title='" + title + '\'' +
-                ", desc='" + desc + '\'' +
-                ", handler='" + handler + '\'' +
-                ", doneTime=" + doneTime +
-                ", response='" + response + '\'' +
-                '}';
+        final StringBuilder sb = new StringBuilder("Ticket{");
+        sb.append("author='").append(author).append('\'');
+        sb.append(", startTime=").append(startTime);
+        sb.append(", title='").append(title).append('\'');
+        sb.append(", desc='").append(desc).append('\'');
+        sb.append(", handler='").append(handler).append('\'');
+        sb.append(", doneTime=").append(doneTime);
+        sb.append(", response='").append(response).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 
     @Override
