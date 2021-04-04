@@ -42,13 +42,13 @@ O material presente neste repositório não é todo da minha autoria, por isso c
 
 </td><td>
 
-| **SC** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/sc/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/sc/prt) |
+| **SC** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/sc/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/sc/prt) |
 | :-------------: |:-------------:| :-----:|
-| **PI** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/pi/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/pi/prt) |
-| **ANALISE** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/analise/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/analise/prt) |
-| **LOGICA** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/logica/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/logica/prt) |
-| **TFM** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/tfm/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/tfm/prt) |
-| **LI2** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/li2/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/1sem/li2/prt) |
+| **PI** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/pi/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/pi/prt) |
+| **ANALISE** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/analise/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/analise/prt) |
+| **LOGICA** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/logica/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/logica/prt) |
+| **TFM** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/tfm/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/tfm/prt) |
+| **LI2** | [*Teórica*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/li2/trc) | [*Prática*](https://github.com/andreubita/miei/tree/master/src/1ano/2sem/li2/prt) |
 
 </td></tr> </table>
 
