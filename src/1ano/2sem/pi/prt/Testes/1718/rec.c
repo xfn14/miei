@@ -47,16 +47,6 @@ float calcDist(Posicao pos){
     return sqrt(pos.x*pos.x + pos.y*pos.y);
 }
 
-int maisCentral(Posicao pos[], int N){
-    int i = 0, min = 0;
-    while(pos[i]){
-        if(calcDist(pos[i]) < calcDist(pos[max]))
-            min = i;
-        i++;
-    }
-    return min;
-}
-
 typedef struct slist{
     int valor;
     struct slist *prox;
@@ -75,6 +65,99 @@ LInt somasAcL(LInt l){
     return l;
 }
 
+typedef struct celula {
+    char * palavra;
+    int comp;
+    struct celula * prox;
+} * Palavras;
+
+int daPalavra(char * s, int * e){
+    int size = 0;
+    int t = 1;
+    while(*s){
+        if(t){
+            if(isspace(*s)){
+                (*e)++;
+            }else{
+                size++;
+                t = 0;
+            }
+        }else{
+            if(isspace(*s)){
+                break;
+            }else{
+                size++;
+            }
+        }
+        *s++;
+    }
+    return size;
+}
+
+Palavras words (char *texto){
+    if(!(*texto)) return NULL;
+    int e=0;
+    Palavras temp = malloc(sizeof(struct celula));
+    Palavras *ret = &temp;
+    while(*texto){
+        int len = daPalavra(texto,&e);
+        Palavras new = malloc(sizeof(struct celula));
+        temp->palavra = texto;
+        temp->comp = len;
+        temp->prox = new;
+        temp = temp->prox;
+        texto += len + e;
+    }
+    return *ret;
+}
+
+Palavras words(char * texto){
+    if(!(*texto)) return NULL;
+    Palavras p = malloc(sizeof(struct celula));
+    Palavras * ret = &p;
+    int crt_size = 0;
+    int word = 0;
+    while(*texto){
+        if(isspace(*texto)){
+            if(word){
+                p->comp++;
+            }else{
+                p->palavra = texto;
+                p->comp = 1;
+            }
+            word = 1;
+        }else{
+            if(word){
+                Palavras new = malloc(sizeof(struct celula));
+                p->prox = new;
+                p = p->prox;
+            }
+            word = 0;
+        }
+    }
+    return *ret;
+}
+
+Palavras daLinha (Palavras t, int n){
+    if(!t) return NULL;
+    int contador = 0;
+    Palavras * ret = &t;
+    Palavras temp;
+    while(t){
+        if(contador + t->comp + 1 <= n){
+            contador += t->comp + 1;
+            temp = t;
+            t = t->prox;
+        }else break;
+    }
+    t = *ret;
+    return temp->prox;
+}
+
 int main(){
+    char * s = "     test tester ";
+    int i = 0;
+    int x = daPalavra(s, &i);
+    printf("%d %d\n", x, i);
     return 0;
 }
