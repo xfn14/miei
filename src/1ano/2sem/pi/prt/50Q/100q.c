@@ -1,25 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * @brief Calcular tamanho de uma string
- * 
- * @param s1 string para calcular tamanho
- * @return tamanho da string
- */
 int strlen(char s1[]){
     int i;
     for(i = 0; s1[i]; i++)
     return i;
 }
 
-/**
- * @brief Pergunta 19
- * 
- * @param s1 string do sufixo
- * @param s2 string do prefixo
- * @return tamanho do maior sufixo/prefixo
- */
+// 19
 int sufPref (char s1[], char s2[]){
     int i, j, s1_len = strlen(s1), res = 0;
     for(i = 0; s1[i]; i++){
@@ -34,6 +22,7 @@ int sufPref (char s1[], char s2[]){
     return res;
 }
 
+// 20
 int contaPal (char s[]){
     int isWord = 0, ans = 1;
 
@@ -62,6 +51,38 @@ int contaPal(char s[]){
     for(int w = 0; strlen(res); w++)
         if(res[w] == ' ') counter++;
     return counter;
+}
+
+// 25
+int limpaEspacos(char t[]){
+    char * init = t;
+    char * crt;
+    int size = 0;
+    
+    while(*(t+1)){
+        if(*t == ' ' && *(t+1) == ' '){
+            crt = t;
+            for(; *t; ++t) *t = *(t+1);
+            t = crt;
+        }else t++;
+    }
+
+    t = init;
+    while(*t){
+        size++; t++;
+    } return size;
+}
+
+// 40
+void transposta(int N, float m[N][N]){
+    int i, j, temp;
+    for(i = 0; i < N; ++i){
+        for(j = i; j < N; ++j){
+            temp = m[i][j];
+            m[i][j] = m[j][i];
+            m[j][i] = temp;
+        }
+    }
 }
 
 typedef struct posicao {
@@ -103,4 +124,24 @@ void freeL(LInt list){
         free(list);
         list = temp;
     }
+}
+
+// 66
+LInt cloneL(LInt l){
+    LInt new = NULL;
+    while(l){
+        LInt crt = malloc(sizeof(struct lligada));
+        crt->valor = l->valor;
+        crt->prox = new;
+        l = l->prox;
+    }
+
+    LInt nova = NULL;
+    while(new){
+        LInt crt = malloc(sizeof(struct lligada));
+        crt->valor = new->valor;
+        crt->prox = nova;
+        new = new->prox;
+    }
+    return nova;
 }

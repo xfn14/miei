@@ -260,12 +260,16 @@ int remRep (char x[]){
 }
 
 int limpaEspacos (char t[]){
-
+    char * init = t;
+    int size = 0;
     while (*(t+1)!= '\0'){
-        if (*t == ' ' && *(t+1) == ' ')step(t);
+        if (*t == ' ' && *(t+1) == ' ') step(t);
         else t++;
     }
-    
+    t = init;
+    while(*t){
+        size++; t++;
+    } return size;
 }
 
 void insere (int v[], int N, int x) {

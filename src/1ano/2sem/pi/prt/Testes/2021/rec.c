@@ -6,7 +6,7 @@ int paresImpares(int v[], int N){
     int last = N - 1;
     int par_counter = 0;
 
-    for(i = 0; i < last-1; ++i){
+    for(i = 0; i < last-1 && i < N; ++i){
         if(v[i] % 2 != 0){
             while(v[last] % 2 != 0)
                 last--;
@@ -79,13 +79,13 @@ int main(){
     printf("\n");
     printf("\n");
 
-    int N = 3;
+    int N = 10;
     int m[N][N];
     int i, j;
-    latino(3, m);
+    latino(10, m);
     for(i = 0; i < N; ++i){
         for(j = 0; j < N; ++j){
-            printf("%d", m[i][j]);
+            printf("%d ", m[i][j]);
         }
         printf("\n");
     }
