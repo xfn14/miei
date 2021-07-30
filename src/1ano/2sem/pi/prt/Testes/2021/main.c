@@ -66,7 +66,7 @@ int modaAux(int v[], int N, int x){
 typedef struct lligada {
     int valor;
     struct lligada *prox;
-} *LInt;
+} * LInt;
 
 LInt newLInt (int v, LInt t){
     LInt new = (LInt) malloc (sizeof (struct lligada));
@@ -129,6 +129,11 @@ void caminho(ABin a){
 }
 
 int main(){
+    int t100;
+    t100 = sumhtpo(100);
+    printf("t100: %d\n", t100);
+    return 0;
+
     LInt ll = newLInt(10, NULL);
     ll = newLInt(7, ll);
     ll = newLInt(8, ll);

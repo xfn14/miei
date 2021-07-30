@@ -126,6 +126,19 @@ void freeL(LInt list){
     }
 }
 
+// 57 (sem alocar memoria)
+void merge (LInt * r, LInt a, LInt b){
+    while(a || b){
+        if((a && !b) || (a && b && a->valor < b->valor)){
+            *r = a;
+            a = a->prox;
+        }else if((b && !a) || (a && b && b->valor < a->valor)){
+            *r = b;
+            b = b->prox;
+        } r = &((*r)->prox);
+    }
+}
+
 // 66
 LInt cloneL(LInt l){
     LInt new = NULL;
